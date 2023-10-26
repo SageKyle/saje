@@ -1,0 +1,119 @@
+.container {
+	width: 100%;
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+}
+
+.logo {
+	display: flex;
+	letter-spacing: -6px;
+	text-transform: uppercase;
+	margin-right: auto;
+}
+
+.logo span {
+	color: rgb(var(--primary-rgb));
+}
+
+.toggleContainer {
+	padding: 1rem;
+	display: flex;
+	cursor: pointer;
+	width: 2rem;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	object-position: center;
+	position: relative;
+}
+
+.toggleIcon {
+	width: 100%;
+	display: inline-block;
+}
+
+.dark {
+	background-color: #fff;
+}
+
+.navbar {
+	position: absolute;
+	right: 4rem;
+	top: 6rem;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1rem;
+	padding: 2rem 6rem;
+	border-radius: 1rem;
+	background-color: rgba(var(--accent-rgb), 1);
+}
+
+.navLink {
+	text-transform: capitalize;
+}
+
+.navToggle {
+	/* display: flex;
+	width: 2.3rem;
+	height: 3px;
+	border-radius: 2rem;
+	margin-inline: 2rem;
+	background-color: rgb(var(--foreground-rgb));
+	position: relative;
+	cursor: pointer; */
+
+	z-index: 999;
+	width: 2.78em;
+	height: 2.09em;
+	background: none;
+	position: relative;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-flexbox;
+	display: inline-flex;
+	margin-top: 0.699em;
+	color: rgb(var(--foreground-rgb));
+	cursor: pointer;
+}
+
+.navToggle::before,
+.navToggle::after {
+	/* content: '';
+	height: 3px;
+	background-color: rgb(var(--foreground-rgb));
+	display: inline-block;
+	position: absolute;
+	border-radius: 2rem; */
+
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	-webkit-transition: 0.2s ease;
+	transition: 0.2s ease;
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+	background-color: currentColor;
+}
+
+.navToggle::before {
+	top: 0;
+	/* width: 100%; */
+}
+
+.navToggle::after {
+	/* bottom: -0.6rem;
+	right: 0;
+	width: 80%; */
+
+	right: 0;
+	width: 72%;
+	top: 0.51rem;
+}
