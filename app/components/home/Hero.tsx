@@ -4,13 +4,13 @@ import Image from 'next/image'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { FaHashnode, FaXTwitter } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
-import Navbar from '../Navbar'
+// import Navbar from '../Navbar'
 
 export default function Hero() {
 	return (
 		<>
 			<section aria-label="hero section" className={Style.container}>
-				<Navbar />
+				{/* <Navbar /> */}
 				<div className={Style.hero}>
 					<article>
 						<h1>Frontend Developer.</h1>

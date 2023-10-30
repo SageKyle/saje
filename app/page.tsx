@@ -1,5 +1,5 @@
-// import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 import CTA from './components/home/CTA'
 import Hero from './components/home/Hero'
 import Intro from './components/home/Intro'
@@ -11,7 +11,7 @@ import styles from './page.module.css'
 export default function Home() {
 	return (
 		<>
-			{/* <Navbar /> */}
+			<Navbar />
 			<main className={styles.main}>
 				<Hero />
 				<Intro />
