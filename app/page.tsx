@@ -1,20 +1,25 @@
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import CTA from './components/home/CTA'
+import Hero from './components/home/Hero'
+import Intro from './components/home/Intro'
+import MyExperience from './components/home/MyExperience'
+import Summary from './components/home/Summary'
+import Testimonials from './components/home/Testimonials'
 import styles from './page.module.css'
 
 export default function Home() {
 	return (
 		<>
-			<Navbar />
+			{/* <Navbar /> */}
 			<main className={styles.main}>
-				<h1>Frontend Developer</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam est
-					iste possimus doloribus rerum. Animi deserunt in quo doloremque
-					voluptate sapiente atque odio aut error sequi veritatis, eius
-					perspiciatis illum dolore, laudantium a officia cumque! At harum
-					doloribus aliquam fuga consectetur quaerat minus, maiores neque
-					laborum ipsum dicta adipisci ex!
-				</p>
+				<Hero />
+				<Intro />
+				<MyExperience />
+				<Testimonials />
+				<Summary />
+				<CTA />
+				<Footer />
 			</main>
 		</>
 	)

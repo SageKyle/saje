@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -8,6 +9,8 @@ import LightModeIcon from '../assets/icons/light_mode.svg'
 import PauseIcon from '../assets/icons/pause.svg'
 import PlayIcon from '../assets/icons/play.svg'
 import Styles from '../assets/styles/navbar.module.css'
+import AnimationInfoPopup from '../helpers/animationInfoPopup'
+import { navLinks } from '../helpers/navLinksObj'
 
 export default function Navbar() {
 	const [darkMode, setDarkMode] = useState(true)
@@ -28,51 +31,73 @@ export default function Navbar() {
 
 	return (
 		<header className={Styles.container}>
-			<h1 className={Styles.logo}>
+			<Link href={'/'} className={Styles.logo}>
 				p<span>s</span>
-			</h1>
-			<div className={Styles.toggleContainer} onClick={toggleAnimation}>
-				{showAnimation && (
-					<Image
-						src={PauseIcon}
-						fill
-						loading="lazy"
-						className={`${Styles.toggleIcon} ${Styles.animate}`}
-						alt="toggle animations"
-					/>
-				)}
+			</Link>
+			<section
+				className={Styles.iconWrapper}
+				aria-label="animation and theme toggle container"
+			>
+				<div
+					className={`${Styles.toggleContainer} ${Styles.animationWrapper}`}
+					onClick={toggleAnimation}
+					aria-describedby="animation-info"
+				>
+					{showAnimation && (
+						<motion.div
+							whileTap={{ y: '50%' }}
+							transition={{ duration: 1, delay: 0.3 }}
+							className=""
+						>
+							<Image
+								src={PauseIcon}
+								fill
+								loading="lazy"
+								className={`${Styles.toggleIcon} ${Styles.animate}`}
+								alt="toggle animations"
+							/>
+						</motion.div>
+					)}
 
-				{!showAnimation && (
-					<Image
-						src={PlayIcon}
-						fill
-						loading="lazy"
-						className={`${Styles.toggleIcon} ${Styles.animate}`}
-						alt="toggle animations"
-					/>
-				)}
-			</div>
-			<div className={Styles.toggleContainer} onClick={toggleTheme}>
-				{darkMode && (
-					<Image
-						src={LightModeIcon}
-						fill
-						loading="lazy"
-						className={`${Styles.toggleIcon} ${Styles.light}`}
-						alt="toggle theme"
-					/>
-				)}
+					{!showAnimation && (
+						<motion.div
+							whileTap={{ y: '50%' }}
+							transition={{ duration: 1, delay: 0.3 }}
+							className=""
+						>
+							<Image
+								src={PlayIcon}
+								fill
+								loading="lazy"
+								className={`${Styles.toggleIcon} ${Styles.animate}`}
+								alt="toggle animations"
+							/>
+						</motion.div>
+					)}
+					<AnimationInfoPopup />
+				</div>
+				{/* <div className={Styles.toggleContainer} onClick={toggleTheme}>
+					{darkMode && (
+						<Image
+							src={LightModeIcon}
+							fill
+							loading="lazy"
+							className={`${Styles.toggleIcon} ${Styles.light}`}
+							alt="toggle theme"
+						/>
+					)}
 
-				{!darkMode && (
-					<Image
-						src={DarkModeIcon}
-						fill
-						loading="lazy"
-						className={`${Styles.toggleIcon} ${Styles.dark}`}
-						alt="toggle theme"
-					/>
-				)}
-			</div>
+					{!darkMode && (
+						<Image
+							src={DarkModeIcon}
+							fill
+							loading="lazy"
+							className={`${Styles.toggleIcon} ${Styles.dark}`}
+							alt="toggle theme"
+						/>
+					)}
+				</div> */}
+			</section>
 			<div
 				className={Styles.navToggle}
 				role="button"
@@ -82,15 +107,15 @@ export default function Navbar() {
 
 			{isOpen && (
 				<nav className={Styles.navbar}>
-					<Link href={'/'} className={Styles.navLink}>
-						home
-					</Link>
-					<Link href={'/work'} className={Styles.navLink}>
-						my work
-					</Link>
-					<Link href={'/about'} className={Styles.navLink}>
-						about
-					</Link>
+					{navLinks.map((link) => (
+						<Link
+							key={link.text.trim()}
+							href={link.link}
+							className={Styles.navLink}
+						>
+							{link.text}
+						</Link>
+					))}
 					<a
 						href={'https:saje.hashnode.dev'}
 						target="_blank"
