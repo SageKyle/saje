@@ -1,0 +1,78 @@
+.container {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 45% auto;
+	gap: 4rem;
+	align-items: baseline;
+	padding: 7rem;
+	position: relative;
+}
+
+.sectionHeading {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	color: rgb(var(--primary-rgb));
+	margin-bottom: 1.5rem;
+}
+
+.sectionTxt {
+	font-size: 1.2rem;
+	font-weight: 200;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1;
+	color: rgb(var(--background-start-rgb), 0.8);
+}
+
+.sectionTxt p {
+	margin-bottom: 1rem;
+}
+
+.imgWrapper {
+	width: 70%;
+	height: 100%;
+	position: relative;
+	object-fit: contain;
+	margin-inline: 4rem auto;
+}
+
+.imgWrapper img {
+	display: inline-block;
+	z-index: 2;
+}
+
+.eco,
+.briskit,
+.openSource {
+	width: 4rem;
+	aspect-ratio: 1/1;
+	display: grid;
+	place-content: center;
+	text-align: center;
+	position: absolute;
+	padding: 0.2rem;
+	border-radius: 50%;
+	border: 2px solid currentColor;
+	z-index: 1;
+	font-size: 0.61rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+}
+
+.eco {
+	top: 2rem;
+	right: 40%;
+	color: rgb(98, 160, 4);
+}
+
+.briskit {
+	top: 8rem;
+	right: 34%;
+	color: palevioletred;
+}
+
+.openSource {
+	top: 7.5rem;
+	left: -2%;
+}
