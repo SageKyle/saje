@@ -1,0 +1,60 @@
+.container {
+	width: 100%;
+	height: 100vh;
+	height: 100svh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: flex-start;
+	padding: 7rem;
+	background-color: rgb(var(--background-start-rgb), 0.85);
+	color: rgb(var(--background-rgb));
+	position: relative;
+}
+
+.container::before {
+	display: inline-block;
+	content: url('../images/pattern.png');
+	opacity: 0.65;
+	filter: invert(40%);
+	position: absolute;
+	top: 5rem;
+	right: 20%;
+	z-index: 1;
+}
+
+.container::after {
+	display: inline-block;
+	content: url('../images/circle-pattern.png');
+	opacity: 0.65;
+	filter: invert(40%);
+	transform: rotate(60deg);
+	position: absolute;
+	bottom: 5rem;
+	left: 10%;
+	z-index: 1;
+}
+
+.container article {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.section:last-child {
+	align-self: flex-end;
+}
+
+.sectionHeading {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	color: rgb(var(--primary-rgb));
+	margin-bottom: 1.5rem;
+}
+
+.sectionTxt {
+	width: 90%;
+	font-size: 1.4rem;
+	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+}

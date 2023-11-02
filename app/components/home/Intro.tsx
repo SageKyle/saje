@@ -1,22 +1,24 @@
+import Styles from '../../assets/styles/intro.module.css'
+
 export default function Intro() {
 	return (
 		<section
 			id="introduction"
 			aria-label="introduction to what I do"
-			className=""
+			className={Styles.container}
 		>
-			<article>
-				<h2>Engineering</h2>
-				<p>
+			<article className={Styles.section}>
+				<h2 className={Styles.sectionHeading}>Engineering</h2>
+				<p className={Styles.sectionTxt}>
 					In building JavaScript applications, I&apos;m equipped with just the
 					right tools, and can absolutely function independently of them to
 					deliver fast, resilient solutions optimized for scale — performance
 					and scalabilty are priorities on my radar.
 				</p>
 			</article>
-			<article>
-				<h2>Writing</h2>
-				<p>
+			<article className={Styles.section}>
+				<h2 className={Styles.sectionHeading}>Writing</h2>
+				<p className={Styles.sectionTxt}>
 					In building JavaScript applications, I&apos;m equipped with just the
 					right tools, and can absolutely function independently of them to
 					deliver fast, resilient solutions optimized for scale — performance
