@@ -1,0 +1,65 @@
+.primaryBtn {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgb(var(--foreground-rgb));
+	background-color: rgb(var(--primary-rgb));
+	padding: 1rem 2rem;
+	margin: 0.5rem;
+	border-radius: 0.2rem;
+	text-transform: capitalize;
+}
+
+.secondaryBtn {
+	font-family: 'Montserrat', sans-serif;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgb(var(--primary-rgb));
+	margin: 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	outline: 2px solid rgb(var(--foreground-rgb), 0.5);
+	padding: 1rem 2rem;
+	border-radius: 0.2rem;
+}
+
+.icon {
+	font-size: 1.2rem;
+	font-weight: 200;
+}
+
+/* this controls the animation for easy toggling later */
+.animateBtn {
+	position: relative;
+	overflow: hidden;
+	transition: all 0.7s;
+}
+
+.animateBtn:hover svg {
+	fill: rgb(var(--foreground-rgb));
+}
+
+.animateBtn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -5rem;
+	width: 0;
+	height: 100%;
+	background-color: rgb(var(--primary-rgb));
+	transform: skewX(35deg);
+	z-index: -1;
+	transition: width 0.7s;
+}
+
+.animateBtn:hover::before {
+	width: 150%;
+}
+
+.animateBtn:hover {
+	color: rgb(var(--foreground-rgb));
+	z-index: 2;
+}

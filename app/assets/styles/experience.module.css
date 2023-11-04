@@ -8,6 +8,10 @@
 	align-items: baseline;
 	padding: 7rem;
 	position: relative;
+	background-image: url('../images/grey-wave-bg.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
 }
 
 .sectionHeading {

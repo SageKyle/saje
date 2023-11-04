@@ -5,7 +5,7 @@ import Hero from './components/home/Hero'
 import Intro from './components/home/Intro'
 import MyExperience from './components/home/MyExperience'
 import Summary from './components/home/Summary'
-import Testimonials from './components/home/Testimonials'
+// import Testimonials from './components/home/Testimonials'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
 				<Hero />
 				<Intro />
 				<MyExperience />
-				<Testimonials />
+				{/* <Testimonials /> */}
 				<Summary />
 				<CTA />
 				<Footer />
