@@ -9,13 +9,13 @@
 	padding-inline: 7rem;
 	padding-top: 3rem;
 	padding-bottom: 10rem;
-	background-color: rgb(var(--background-start-rgb), 0.85);
-	background-image: url('../images/black-wave-bg.svg');
+	/* background-color: rgb(var(--background-start-rgb), 0.85); */
+	/* background-image: url('../images/black-wave-bg.svg'); */
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
 	background-attachment: fixed;
-	color: rgb(var(--background-rgb));
+	/* color: rgb(var(--background-rgb)); */
 	position: relative;
 }
 
