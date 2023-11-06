@@ -94,7 +94,6 @@ export default function CTA() {
 								placeholder="Hi Saje, We would love to have you on our team as a Frontend developer as soon as possible"
 								required
 								minLength={5}
-								maxLength={80}
 							></textarea>
 						</label>
 					</fieldset>
