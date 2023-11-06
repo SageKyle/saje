@@ -32,18 +32,23 @@
 	font-weight: 200;
 }
 
-/* this controls the animation for easy toggling later */
-.animateBtn {
-	position: relative;
-	overflow: hidden;
-	transition: all 0.7s;
+.secondaryBtn:hover {
+	font-weight: bold;
+	letter-spacing: 3px;
 }
 
-.animateBtn:hover svg {
+/* this controls the animation for easy toggling later */
+body[data-animate='true'] .animateBtn {
+	position: relative;
+	overflow: hidden;
+	transition: all ease 0.7s;
+}
+
+body[data-animate='true'] .animateBtn:hover svg {
 	fill: rgb(var(--foreground-rgb));
 }
 
-.animateBtn::before {
+body[data-animate='true'] .animateBtn::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -56,11 +61,11 @@
 	transition: width 0.9s;
 }
 
-.animateBtn:hover::before {
+body[data-animate='true'] .animateBtn:hover::before {
 	width: 300%;
 }
 
-.animateBtn:hover {
+body[data-animate='true'] .animateBtn:hover {
 	color: rgb(var(--foreground-rgb));
 	z-index: 2;
 }

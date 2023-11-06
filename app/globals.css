@@ -13,13 +13,12 @@
 	--accent-rgb: 32, 16, 10;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		--foreground-rgb: 255, 255, 255;
 		--background-rgb: 0, 0, 0;
-		/* --background-end-rgb: 0, 0, 0; */
 	}
-}
+} */
 
 * {
 	box-sizing: border-box;
@@ -65,8 +64,8 @@ body::-webkit-scrollbar-thumb {
 	text-transform: capitalize;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
 	}
-}
+} */

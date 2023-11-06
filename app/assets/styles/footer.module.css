@@ -1,0 +1,27 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+	/* background-color: rgb(var(--background-start-rgb), 0.9); */
+	background-image: url('../images/faint-dots.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	background-attachment: fixed;
+}
+
+.container {
+	width: 100%;
+	max-width: 140rem;
+	padding: 4rem;
+	margin-inline: auto;
+	background-color: rgb(var(--background-rgb));
+	color: rgb(var(--foreground-rgb));
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	position: relative;
+}
