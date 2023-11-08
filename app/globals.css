@@ -69,3 +69,9 @@ body::-webkit-scrollbar-thumb {
 		color-scheme: dark;
 	}
 } */
+
+@media screen and (min-width: 1445px) {
+	body {
+		font-size: 1.8rem;
+	}
+}

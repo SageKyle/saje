@@ -1,7 +1,18 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
 .container {
 	width: 100%;
+	max-width: 120rem;
 	height: 100vh;
 	height: 100svh;
+	margin-inline: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -19,7 +30,7 @@
 	gap: 4rem;
 	padding: 2rem 6rem;
 	margin-top: auto;
-	margin-bottom: 4rem;
+	margin-bottom: 6rem;
 	margin-inline: 2rem 6rem;
 	width: 100%;
 }
@@ -50,28 +61,16 @@
 	aspect-ratio: 1/1;
 	height: 100%;
 	margin: 4rem;
-	/* padding: 2rem; */
-	/* border-radius: 50%; */
 	border: 5px solid rgb(var(--accent-rgb));
 	object-position: center;
 	object-fit: contain;
 }
 
 .heroImg::before {
-	/* display: inline-block;
-	content: url('../images/circle-pattern.png');
-	opacity: 0.2;
-	transform: rotate(60deg);
-	position: absolute;
-	top: -1rem;
-	right: 1rem;
-	z-index: 0; */
-
 	content: '';
 	position: absolute;
 	right: 50%;
 	transform: translateX(50%) rotate(180deg);
-	/* top: -1.5rem; */
 	display: inline-block;
 	z-index: 0;
 	width: 0;
@@ -134,5 +133,21 @@
 
 	to {
 		transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 1445px) {
+	.wrapper {
+		min-height: auto;
+		border-bottom: 2px solid rgb(var(--primary-rgb), 0.2);
+	}
+
+	.container {
+		max-height: 50vh;
+		padding-block: 10rem;
+	}
+
+	.ScrollAnim {
+		display: none;
 	}
 }

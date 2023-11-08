@@ -5,11 +5,6 @@
 	display: grid;
 	grid-template-columns: 100%;
 	place-content: center;
-	background-image: url('../images/faint-dots.png');
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: bottom;
-	background-attachment: fixed;
 }
 
 .container {
@@ -127,4 +122,15 @@
 
 body[data-animate='true'] .container {
 	scroll-snap-align: start;
+}
+
+@media screen and (min-width: 1445px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		max-height: 44rem;
+		padding-block: 10rem;
+	}
 }

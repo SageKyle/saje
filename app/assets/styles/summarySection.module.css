@@ -1,7 +1,18 @@
-.container {
+.wrapper {
 	width: 100%;
 	min-height: 100vh;
 	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 120rem;
+	height: 100vh;
+	height: 100svh;
+	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
@@ -9,13 +20,6 @@
 	padding-inline: 7rem;
 	padding-top: 3rem;
 	padding-bottom: 10rem;
-	/* background-color: rgb(var(--background-start-rgb), 0.85); */
-	/* background-image: url('../images/black-wave-bg.svg'); */
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: bottom;
-	background-attachment: fixed;
-	/* color: rgb(var(--background-rgb)); */
 	position: relative;
 }
 
@@ -42,4 +46,15 @@
 	font-weight: 300;
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1445px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		max-height: 51rem;
+		padding-block: 10rem;
+	}
 }

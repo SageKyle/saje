@@ -49,13 +49,13 @@
 
 .title {
 	font-size: 2rem;
-	font-family: 'Monserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 }
 
 .desc,
 .form {
-	font-family: 'Monserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 }
 
@@ -145,4 +145,19 @@
 	cursor: pointer;
 	font-size: 1.5rem;
 	margin-top: 4rem;
+}
+
+@media screen and (min-width: 1445px) {
+	.container {
+		padding: 6rem;
+	}
+
+	.refreshIcon {
+		right: 4rem;
+		top: 4rem;
+	}
+
+	.title {
+		font-size: 2.8rem;
+	}
 }
