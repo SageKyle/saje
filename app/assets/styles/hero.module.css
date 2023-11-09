@@ -126,6 +126,12 @@
 	animation: scroll 0.8s ease 0.1s infinite alternate-reverse;
 }
 
+@media (prefers-reduced-motion) {
+	.ScrollAnim {
+		visibility: hidden;
+	}
+}
+
 @keyframes scroll {
 	from {
 		transform: translateY(1rem);

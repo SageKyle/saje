@@ -73,7 +73,7 @@
 	background-color: rgb(var(--primary-rgb), 0.5);
 	position: absolute;
 	z-index: 1;
-	transition: all ease-in 0.5s;
+	transition: all ease 0.5s;
 	visibility: hidden;
 	width: 0%;
 }
@@ -120,8 +120,15 @@
 	transform: scale(1.1);
 }
 
-body[data-animate='true'] .container {
-	scroll-snap-align: start;
+@media (prefers-reduced-motion) {
+	.linkItem::after,
+	.linkItem::before {
+		visibility: hidden;
+	}
+
+	.linkItem:hover {
+		color: rgb(var(--primary-rgb));
+	}
 }
 
 @media screen and (min-width: 1445px) {

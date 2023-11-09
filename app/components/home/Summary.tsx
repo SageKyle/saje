@@ -1,10 +1,23 @@
+'use client'
+
 import PrimaryBtn from '@/app/utils/PrimaryBtn'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import Styles from '../../assets/styles/summarySection.module.css'
 
 export default function Summary() {
+	const ref = useRef<HTMLDivElement>(null)
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ['0 1', '1.33 1'],
+	})
+	const scaleX = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+
 	return (
 		<section id="summary" className={Styles.wrapper}>
-			<div
+			<motion.div
+				ref={ref}
+				style={{ scale: scaleX, opacity: scaleX }}
 				className={Styles.container}
 				aria-label="a roundup of what I do including their links"
 			>
@@ -35,7 +48,7 @@ export default function Summary() {
 					</p>
 					<PrimaryBtn text="my shelf" href="/shelf" />
 				</article>
-			</div>
+			</motion.div>
 		</section>
 	)
 }

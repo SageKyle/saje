@@ -99,6 +99,7 @@ export default function CTA() {
 					</fieldset>
 					<button
 						type="submit"
+						disabled={formData === initialState}
 						className={`${Utils.secondaryBtn} ${Utils.animateBtn} ${Styles.formBtn}`}
 					>
 						send

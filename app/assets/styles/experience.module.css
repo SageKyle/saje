@@ -22,8 +22,8 @@
 	background-image: url('../images/faint-dots.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: bottom;
 	background-attachment: fixed;
+	scroll-snap-align: start;
 }
 
 .sectionHeading {
