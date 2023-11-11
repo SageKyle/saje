@@ -69,3 +69,22 @@ body[data-animate='true'] .animateBtn:hover {
 	color: rgb(var(--foreground-rgb));
 	z-index: 2;
 }
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 120rem;
+	height: 100vh;
+	height: 100svh;
+	margin-inline: auto;
+	padding: 7rem;
+	position: relative;
+}
