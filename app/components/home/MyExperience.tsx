@@ -52,7 +52,7 @@ export default function MyExperience() {
 							interesting softwares.
 						</p>
 					</section>
-					<PrimaryBtn text="my projects" href="/projects" />
+					<PrimaryBtn text="my work" href="/work" />
 				</article>
 				<div
 					className={Styles.imgWrapper}
