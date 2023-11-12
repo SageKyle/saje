@@ -44,8 +44,8 @@ export default function Footer() {
 						<Link href={'/work'} className={`${Styles.linkItem}`}>
 							My work
 						</Link>
-						<Link href={'/writing'} className={`${Styles.linkItem}`}>
-							Writing
+						<Link href={'/shelf'} className={`${Styles.linkItem}`}>
+							shelf
 						</Link>
 						<Link href={'/resume'} className={`${Styles.linkItem}`}>
 							My Resume

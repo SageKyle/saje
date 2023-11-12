@@ -88,3 +88,19 @@ body[data-animate='true'] .animateBtn:hover {
 	padding: 7rem;
 	position: relative;
 }
+
+.cardContainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-auto-rows: auto;
+	gap: 2rem;
+	margin-top: 6rem;
+}
+
+@media screen and (min-width: 1445px) {
+	.cardContainer {
+		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+		gap: 4rem;
+	}
+}
