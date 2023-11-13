@@ -82,11 +82,91 @@
 	color: cornflowerblue;
 }
 
-.flag {
-	display: inline-block;
-	margin-inline: 2rem;
-	margin-top: 0.5rem;
-	font-weight: bold;
-	color: rgb(var(--primary-rgb));
+.link:visited {
+	color: rgb(60, 122, 238);
+}
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 5rem;
+	margin-inline: 1rem;
+	align-self: flex-start;
+	gap: 0.6rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.asideHeading {
+	font-weight: 400;
+	font-size: 1.8rem;
 	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+}
+
+.aside li {
+	margin-bottom: 0.5rem;
+}
+
+.aside .link {
+	transition: all ease 0.2s;
+	transform-origin: left;
+	position: relative;
+	display: inline-block;
+}
+
+.aside .link::after {
+	content: '';
+	display: inline-block;
+	background-color: currentColor;
+	position: absolute;
+	z-index: 1;
+	transition: all ease 0.5s;
+	visibility: hidden;
+	width: 0%;
+	height: 2px;
+	left: 0;
+	bottom: 0rem;
+}
+
+.aside .link:hover::after {
+	visibility: visible;
+	width: 100%;
+}
+
+.aside .link:hover {
+	filter: opacity(90%);
+}
+
+/* ================== INDIVIDUAL WORK COMPONENT ============== */
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.header .title {
+	margin-inline: auto;
+	color: rgb(var(--primary-rgb));
+}
+
+.sliderContainer {
+	display: flex;
+	width: 100%;
+	min-height: 40vh;
+	margin-block: 4rem;
+}
+
+.textContainer {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	width: 80%;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	line-height: 1.5;
 }

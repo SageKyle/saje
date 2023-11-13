@@ -27,7 +27,7 @@ export default function Work() {
 							aria-description="a card showcasing individual project/work I've worked on or participated in"
 							title={work.name}
 						>
-							<Link href={work.href} className={style.mainContent}>
+							<Link href={`work/${work.href}`} className={style.mainContent}>
 								<div className={style.imgContainer}>
 									<Image src={work.logo} alt={work.name} fill loading="lazy" />
 								</div>
@@ -37,15 +37,41 @@ export default function Work() {
 								<div className={style.linkContainer}>
 									{' '}
 									<FaLink className={style.icon} />
-									<a href={work.link} target="_blank" className={style.link}>
+									<a
+										href={`https://${work.link}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className={style.link}
+									>
 										{work.link}
 									</a>
 								</div>
 							)}
-							<small className={style.flag}>{work.flag}</small>
 						</div>
 					))}
 				</article>
+				<aside className={style.aside} aria-describedby="aside-heading">
+					<h4 className={style.asideHeading} id="aside-heading">
+						Related links
+					</h4>
+					<ul>
+						<li>
+							<Link href={'/playground'} className={style.link}>
+								My playground
+							</Link>
+						</li>
+						<li>
+							<a
+								href="https://github.com/SageKyle"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={`${style.link}`}
+							>
+								Check out my GitHub
+							</a>
+						</li>
+					</ul>
+				</aside>
 			</div>
 		</section>
 	)
