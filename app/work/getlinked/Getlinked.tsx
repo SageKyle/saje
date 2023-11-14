@@ -4,7 +4,7 @@ import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
 import { Poppins } from 'next/font/google'
 // import Image from 'next/image'
-// import Link from 'next/link'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaArrowLeft } from 'react-icons/fa6'
 
@@ -44,7 +44,53 @@ export default function Getlinked() {
 							we&apos;re all about!&rdquo;
 						</em>
 					</p>
+					<p>
+						The pre-hackathon coding challenge was meant to spur developers to
+						express their creativity based on provided designs and
+						specifications.
+					</p>
+					<p>
+						Even though I was unable to participate in the competition, I
+						decided to work on the project to showcase my ability to adhere to
+						design requirements, and creativity.
+					</p>
+					<p>
+						The website features a lot of buttery-smooth animations and colorful
+						designs.
+					</p>
 				</article>
+				<aside className={style.aside} aria-describedby="aside-heading">
+					<h4 className={style.asideHeading} id="aside-heading">
+						Related links
+					</h4>
+					<ul>
+						<li>
+							<a
+								href="https://github.com/SageKyle/getlinked"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={`${style.link}`}
+							>
+								View on GitHub
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://getlinked-v0.netlify.app/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={`${style.link}`}
+							>
+								website
+							</a>
+						</li>
+						<li>
+							<Link href={'/playground'} className={style.link}>
+								My playground
+							</Link>
+						</li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 	)
