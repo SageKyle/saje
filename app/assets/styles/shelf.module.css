@@ -17,10 +17,6 @@
 	transition: all ease 0.2s;
 }
 
-.card:hover {
-	transform: translateY(-0.5rem) scale(1.01);
-}
-
 .card:active {
 	transform: translateY(0.5rem) scale(0.95);
 }
@@ -78,7 +74,14 @@
 	bottom: 0.2rem;
 }
 
-.linkToBlog a:hover::after {
-	visibility: visible;
-	width: 100%;
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.card:hover {
+		transform: translateY(-0.5rem) scale(1.01);
+	}
+
+	.linkToBlog a:hover::after {
+		visibility: visible;
+		width: 100%;
+	}
 }

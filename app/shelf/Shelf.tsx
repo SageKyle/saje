@@ -10,7 +10,10 @@ export default function Shelf() {
 		<section className={utils.wrapper}>
 			<div className={`${utils.container} ${style.container}`}>
 				<h2>
-					/shelf<span style={poppins.style}>.</span>
+					<span className="accent-font">/</span>shelf
+					<span style={poppins.style} className="accent-font">
+						.
+					</span>
 				</h2>
 				<p>Some of my most popular articles.</p>
 				<article className={utils.cardContainer}>

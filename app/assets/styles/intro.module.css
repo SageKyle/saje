@@ -12,7 +12,7 @@
 	max-width: 120rem;
 	height: 100vh;
 	height: 100svh;
-	/* max-height: 44rem; */
+	max-height: 54rem;
 	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -75,7 +75,69 @@
 	}
 
 	.container {
-		max-height: 44rem;
+		max-height: 60rem;
 		padding-block: 10rem;
+	}
+
+	.sectionHeading {
+		font-size: 4rem;
+	}
+
+	.sectionTxt {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		min-height: 70rem;
+		align-items: center;
+		grid-template-columns: auto;
+	}
+
+	.container::before {
+		right: 45%;
+		top: -10%;
+		opacity: 0.4;
+	}
+
+	.container::after {
+		bottom: 20rem;
+		left: 60%;
+		opacity: 0.2;
+	}
+
+	.sectionTxt {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.container {
+		min-height: 66rem;
+	}
+
+	.container::before {
+		right: 54%;
+		top: -6%;
+		opacity: 0.1;
+	}
+
+	.sectionTxt {
+		font-size: 1.6rem;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.container {
+		padding: 4rem;
+	}
+
+	.container::after {
+		opacity: 0.15;
 	}
 }

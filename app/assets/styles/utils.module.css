@@ -34,20 +34,11 @@
 	cursor: pointer;
 }
 
-.secondaryBtn:hover {
-	font-weight: bold;
-	letter-spacing: 3px;
-}
-
 /* this controls the animation for easy toggling later */
 body[data-animate='true'] .animateBtn {
 	position: relative;
 	overflow: hidden;
 	transition: all ease 0.7s;
-}
-
-body[data-animate='true'] .animateBtn:hover svg {
-	fill: rgb(var(--foreground-rgb));
 }
 
 body[data-animate='true'] .animateBtn::before {
@@ -61,15 +52,6 @@ body[data-animate='true'] .animateBtn::before {
 	transform: skewX(35deg);
 	z-index: -1;
 	transition: width 0.9s;
-}
-
-body[data-animate='true'] .animateBtn:hover::before {
-	width: 300%;
-}
-
-body[data-animate='true'] .animateBtn:hover {
-	color: rgb(var(--foreground-rgb));
-	z-index: 2;
 }
 
 .wrapper {
@@ -100,9 +82,34 @@ body[data-animate='true'] .animateBtn:hover {
 	margin-top: 6rem;
 }
 
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.secondaryBtn:hover {
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+
+	body[data-animate='true'] .animateBtn:hover::before {
+		width: 300%;
+	}
+
+	body[data-animate='true'] .animateBtn:hover {
+		color: rgb(var(--foreground-rgb));
+		z-index: 2;
+	}
+}
+
 @media screen and (min-width: 1445px) {
+	.container {
+		max-width: 170rem;
+	}
+
 	.cardContainer {
 		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 		gap: 4rem;
+	}
+
+	.icon {
+		font-size: 2.5rem;
 	}
 }

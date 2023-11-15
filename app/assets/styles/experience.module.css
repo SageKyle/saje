@@ -12,6 +12,7 @@
 	max-width: 120rem;
 	min-height: 100vh;
 	min-height: 100svh;
+	/* max-height: 55rem; */
 	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 50% auto;
@@ -34,7 +35,7 @@
 }
 
 .sectionTxt {
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 	font-weight: 200;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1;
@@ -49,6 +50,7 @@
 .imgWrapper {
 	width: 70%;
 	height: 100%;
+	max-height: 55rem;
 	position: relative;
 	object-fit: contain;
 	margin-inline: 4rem auto;
@@ -100,11 +102,54 @@
 	}
 
 	.container {
-		max-height: 60rem;
+		min-height: 65rem;
 		padding-block: 10rem;
+	}
+
+	.sectionHeading {
+		font-size: 4rem;
 	}
 
 	.sectionTxt {
 		margin-bottom: 5rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		/* height: auto; */
+		grid-template-columns: auto;
+		padding-block: 4rem;
+		min-height: auto;
+		max-height: 88rem;
+	}
+
+	.imgWrapper {
+		height: 33rem;
+	}
+
+	.sectionTxt {
+		margin-bottom: 5rem;
+	}
+
+	.openSource {
+		left: 20%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.openSource {
+		left: 10%;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.container {
+		padding: 2rem;
 	}
 }

@@ -1,10 +1,13 @@
 import Avatar from '@/app/assets/images/saje-avatar.png'
 import Style from '@/app/assets/styles/hero.module.css'
+import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { FaHashnode, FaXTwitter } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import Navbar from '../Navbar'
+
+const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export default function Hero() {
 	return (
@@ -15,7 +18,7 @@ export default function Hero() {
 					<div className={Style.hero}>
 						<article className={Style.heroTxt}>
 							<h1 className={Style.title}>
-								Frontend Developer<span>.</span>
+								Frontend Developer<span style={poppins.style}>.</span>
 							</h1>
 							<p className={Style.intro}>
 								In a world of pixels and code, I&apos;m the frontend alchemist

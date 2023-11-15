@@ -12,6 +12,7 @@
 	max-width: 120rem;
 	height: 100vh;
 	height: 100svh;
+	max-height: 55rem;
 	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -54,7 +55,36 @@
 	}
 
 	.container {
-		max-height: 51rem;
+		max-height: 75rem;
 		padding-block: 10rem;
+	}
+
+	.sectionTxt {
+		font-size: 2rem;
+		margin-block: 4rem;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		height: auto;
+		grid-template-columns: auto;
+		padding-block: 6rem;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.container {
+		max-height: max-content;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.container {
+		padding: 4rem;
 	}
 }

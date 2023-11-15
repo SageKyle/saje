@@ -29,8 +29,8 @@
 	align-items: center;
 	gap: 4rem;
 	padding: 2rem 6rem;
-	margin-top: auto;
-	margin-bottom: 6rem;
+	margin-block: auto;
+	/* margin-bottom: 6rem; */
 	margin-inline: 2rem 6rem;
 	width: 100%;
 }
@@ -41,7 +41,7 @@
 }
 
 .title {
-	font-size: 3.5rem;
+	font-size: 4.5rem;
 	margin-bottom: 1rem;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .intro {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	font-weight: 300;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -153,7 +153,78 @@
 		padding-block: 10rem;
 	}
 
+	.hero {
+		margin-bottom: 0;
+	}
+
+	.title {
+		font-size: 6.5rem;
+	}
+
+	.intro {
+		font-size: 2.5rem;
+		margin-top: 4rem;
+	}
+
 	.ScrollAnim {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.container {
+		padding-bottom: 4rem;
+	}
+
+	.hero {
+		flex-direction: column;
+		/* margin-top: 8rem; */
+		margin-inline: 2rem;
+	}
+
+	.title {
+		font-size: 5rem;
+		width: 50%;
+	}
+
+	.heroTxt {
+		width: 100%;
+		font-size: 2.5rem;
+	}
+
+	.heroImg {
+		width: 50%;
+		margin-inline: auto;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.container {
+		padding-bottom: 4rem;
+	}
+
+	.hero {
+		margin-top: 8rem;
+	}
+
+	.title {
+		font-size: 3.5rem;
+		width: 50%;
+	}
+
+	.ScrollAnim {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.hero {
+		padding: 4rem;
+		margin-inline: 0;
+		margin-block: auto;
+	}
+
+	.ScrollAnim {
+		display: inline-flex;
 	}
 }

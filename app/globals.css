@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
 
 :root {
-	--font-mono: 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', sans-serif;
-
 	/* --foreground-rgb: 0, 0, 0; */
 	--foreground-rgb: 255, 255, 255;
 	--background-start-rgb: 214, 219, 220;
@@ -20,23 +18,34 @@
 	}
 } */
 
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	width: 100%;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
-html,
 body {
 	max-width: 100vw;
 	overflow-x: hidden;
 	color: rgb(var(--background-start-rgb));
 	background-color: rgb(var(--background-rgb));
+	font-size: 1.8rem;
+	position: relative;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+img {
+	color: rgb(60, 122, 238);
 }
 
 body::-webkit-scrollbar {
@@ -52,16 +61,8 @@ body::-webkit-scrollbar-thumb {
 	/* border-radius: 4rem; */
 }
 
-.primary-btn {
-	color: rgb(var(--foreground-rgb));
-	background-color: rgb(var(--primary-rgb));
-	padding: 0.9rem 2rem;
-	font-size: 1.4rem;
-	border-radius: 0.2rem;
-	width: fit-content;
-	border: 0;
-	outline: 0;
-	text-transform: capitalize;
+.accent-font {
+	color: rgb(var(--background-start-rgb), 0.7);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -72,6 +73,9 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 1445px) {
 	body {
-		font-size: 1.8rem;
+		font-size: 3rem;
 	}
+}
+
+@media screen and (min-width: 620px) {
 }

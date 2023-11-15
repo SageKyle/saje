@@ -13,9 +13,12 @@ export default function Work() {
 		<section className={utils.wrapper}>
 			<div className={`${utils.container} ${style.container}`}>
 				<h2>
-					/work<span style={poppins.style}>.</span>
+					<span className="accent-font">/</span>work
+					<span style={poppins.style} className="accent-font">
+						.
+					</span>
 				</h2>
-				<p>
+				<p className={style.intro}>
 					Selected work I&apos;ve taken on in the past, that have also
 					contributed to shaping my career.
 				</p>

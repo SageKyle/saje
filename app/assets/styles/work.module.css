@@ -27,10 +27,6 @@
 	transition: all ease 0.2s;
 }
 
-.card:hover {
-	transform: translateY(-0.5rem) scale(1.01);
-}
-
 .card:active {
 	transform: translateY(0.5rem) scale(0.95);
 }
@@ -80,6 +76,7 @@
 
 .link {
 	color: cornflowerblue;
+	font-size: 1.4rem;
 }
 
 .link:visited {
@@ -129,15 +126,6 @@
 	bottom: 0rem;
 }
 
-.aside .link:hover::after {
-	visibility: visible;
-	width: 100%;
-}
-
-.aside .link:hover {
-	filter: opacity(90%);
-}
-
 /* ================== INDIVIDUAL WORK COMPONENT ============== */
 .header {
 	width: 100%;
@@ -183,4 +171,75 @@
 
 .textContainer p {
 	margin-top: 1.5rem;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.card:hover {
+		transform: translateY(-0.5rem) scale(1.01);
+	}
+
+	.aside .link:hover::after {
+		visibility: visible;
+		width: 100%;
+	}
+
+	.aside .link:hover {
+		filter: opacity(90%);
+	}
+}
+
+@media screen and (min-width: 1445px) {
+	.card {
+		height: 30rem;
+	}
+
+	.header {
+		margin-top: 6rem;
+	}
+	.cardContainer {
+		grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+	}
+
+	.title {
+		font-size: 3.2rem;
+	}
+	.link,
+	.linkContainer .icon {
+		font-size: 1.8rem;
+	}
+
+	.header .icon {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.header {
+		padding-inline: 0;
+	}
+	.textContainer {
+		width: 100%;
+	}
+
+	.link {
+		max-width: 30ch;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.container {
+		padding: 4rem;
+	}
+
+	.header {
+		flex-direction: column;
+	}
+
+	.header .icon:first-child {
+		display: none;
+	}
 }
