@@ -113,3 +113,68 @@ body[data-animate='true'] .animateBtn::before {
 		font-size: 2.5rem;
 	}
 }
+
+/* ================= INFINITE HORIZONTAL SCROLL LIST ============== */
+
+.scrollWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.scrollContainer {
+	overflow: hidden;
+	width: 100%;
+	max-width: 50rem;
+	margin-inline: auto;
+	padding: 1rem;
+	position: relative;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.scrollItem {
+	list-style: none;
+	width: fit-content;
+	display: inline-flex;
+	white-space: nowrap;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	color: rgb(var(--background-start-rgb), 0.5);
+	text-transform: capitalize;
+	padding: 0.5rem 1rem;
+	border: 2px solid currentColor;
+	border-radius: 1rem;
+}
+
+.scrollContainer[data-direction='backward'] {
+	animation-name: scrollLeft;
+}
+
+.scrollContainer[data-direction='forward'] {
+	animation-name: scrollRight;
+}
+
+@keyframes scrollLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+@keyframes scrollRight {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(200%);
+	}
+}
