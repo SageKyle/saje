@@ -56,7 +56,7 @@
 }
 
 .sectionHeading {
-	font-size: 2.5rem;
+	font-size: var(--large-font-size);
 	text-transform: capitalize;
 	color: rgb(var(--primary-rgb));
 	margin-bottom: 1.5rem;
@@ -64,9 +64,9 @@
 
 .sectionTxt {
 	width: 90%;
-	font-size: 1.4rem;
+	font-size: var(--default-font-size);
 	font-weight: 300;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--default-font);
 }
 
 @media screen and (min-width: 1445px) {
@@ -80,11 +80,7 @@
 	}
 
 	.sectionHeading {
-		font-size: 4rem;
-	}
-
-	.sectionTxt {
-		font-size: 2rem;
+		font-size: var(--large-font-size);
 	}
 }
 
@@ -110,10 +106,6 @@
 		left: 60%;
 		opacity: 0.2;
 	}
-
-	.sectionTxt {
-		font-size: 1.8rem;
-	}
 }
 
 @media screen and (max-width: 620px) {
@@ -125,10 +117,6 @@
 		right: 54%;
 		top: -6%;
 		opacity: 0.1;
-	}
-
-	.sectionTxt {
-		font-size: 1.6rem;
 	}
 }
 

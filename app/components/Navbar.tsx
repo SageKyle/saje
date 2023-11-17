@@ -1,13 +1,11 @@
 'use client'
 
-// import { motion } from 'framer-motion'
-import utils from '@/app/assets/styles/utils.module.css'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import { useState } from 'react'
 import { MdMenu } from 'react-icons/md'
 import Styles from '../assets/styles/navbar.module.css'
-import { navLinks } from '../helpers/navLinksObj'
+import { navLinks } from '../lib/navLinksObj'
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
@@ -42,9 +40,15 @@ export default function Navbar() {
 					>
 						blog
 					</a>
-					<button className={Styles.active} style={poppins.style}>
+					<a
+						href="https://docs.google.com/document/d/1wg43AyIUQ81EnfTUH9AtWXp4sK_zgF7eX5h3d3jkNug/"
+						target="_blank"
+						rel="noreferrer noopener"
+						className={Styles.active}
+						style={poppins.style}
+					>
 						my resume
-					</button>
+					</a>
 				</nav>
 				{/* <button className="primary-btn">contact</button> */}
 

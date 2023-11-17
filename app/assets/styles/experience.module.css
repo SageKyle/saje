@@ -28,16 +28,16 @@
 }
 
 .sectionHeading {
-	font-size: 2.5rem;
+	font-size: var(--big-font-size);
 	text-transform: capitalize;
 	color: rgb(var(--primary-rgb));
 	margin-bottom: 1.5rem;
 }
 
 .sectionTxt {
-	font-size: 1.6rem;
+	font-size: var(--default-font-size);
 	font-weight: 200;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--default-font);
 	line-height: 1;
 	color: rgb(var(--background-start-rgb), 0.8);
 	margin-bottom: 3rem;
@@ -112,7 +112,6 @@
 
 	.sectionTxt {
 		margin-bottom: 5rem;
-		font-size: 2rem;
 	}
 }
 
@@ -122,7 +121,6 @@
 	}
 
 	.container {
-		/* height: auto; */
 		grid-template-columns: auto;
 		padding-block: 4rem;
 		min-height: auto;

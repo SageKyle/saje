@@ -31,7 +31,7 @@
 	letter-spacing: -6px;
 	text-transform: uppercase;
 	margin-right: auto;
-	font-size: 2.5rem;
+	font-size: var(--large-font-size);
 }
 
 .logo span {
@@ -42,10 +42,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 2rem;
+	gap: 3rem;
 	font-weight: 400;
 	letter-spacing: 2px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--default-font);
 	font-size: 1.7rem;
 }
 
@@ -54,6 +54,10 @@
 	display: inline-flex;
 	position: relative;
 	transition: all ease-in-out 0.5s;
+}
+
+.navLink:active {
+	color: rgb(var(--primary-rgb));
 }
 
 .navLink::after {
@@ -81,7 +85,7 @@
 
 .navToggle {
 	display: none;
-	font-size: 3rem;
+	font-size: var(--large-font-size);
 	position: relative;
 	cursor: pointer;
 }

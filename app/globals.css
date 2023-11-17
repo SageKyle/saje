@@ -9,6 +9,10 @@
 	--primary-rgb: 250, 128, 114;
 	/* --primary-rgb: 238, 3, 3; */
 	--accent-rgb: 32, 16, 10;
+	--default-font-size: 1.6rem
+	--big-font-size: 2rem
+	--large-font-size: 3rem;
+	--default-font: 'Monserrat', sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -35,7 +39,7 @@ body {
 	overflow-x: hidden;
 	color: rgb(var(--background-start-rgb));
 	background-color: rgb(var(--background-rgb));
-	font-size: 1.8rem;
+	font-size: var(--default-font-size);
 	position: relative;
 }
 
@@ -72,10 +76,16 @@ body::-webkit-scrollbar-thumb {
 } */
 
 @media screen and (min-width: 1445px) {
-	body {
-		font-size: 3rem;
+	:root {
+		--default-font-size: 2.3rem
 	}
+	/* body {
+		font-size: 3rem;
+	} */
 }
 
 @media screen and (min-width: 620px) {
+	:root {
+		--default-font-size: 1.5rem
+	}
 }
