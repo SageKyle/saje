@@ -1,0 +1,37 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	height: 100svh;
+	width: 100%;
+	max-width: 60rem;
+	margin-inline: auto;
+}
+
+.imgContainer {
+	display: inline-block;
+	width: 80%;
+	height: 20rem;
+	position: relative;
+}
+
+.imgContainer img {
+	display: inline-block;
+	object-fit: contain;
+	object-position: center;
+}
+
+.title {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	letter-spacing: 5px;
+	font-size: 2rem;
+}
+
+.desc {
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	color: rgb(var(--background-start-rgb), 0.7);
+}

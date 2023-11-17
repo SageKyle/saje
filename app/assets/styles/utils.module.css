@@ -1,0 +1,187 @@
+.primaryBtn {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	/* color: rgb(var(--foreground-rgb)); */
+	color: rgb(var(--primary-rgb));
+	background-color: transparent;
+	padding: 1rem 2rem;
+	margin: 0.5rem;
+	border-radius: 0.2rem;
+	text-transform: capitalize;
+	border: 0;
+	border-radius: 0.5rem;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-family: var(--default-font);
+	font-size: var(--big-font-size);
+}
+
+.secondaryBtn {
+	font-family: var(--default-font);
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgb(var(--primary-rgb));
+	margin: 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	outline: 2px solid rgb(var(--foreground-rgb), 0.5);
+	border: 0;
+	padding: 1rem 2rem;
+	border-radius: 0.2rem;
+	transition: all ease 0.7s;
+}
+
+.icon {
+	font-size: 1.2rem;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+/* this controls the animation for easy toggling later */
+body[data-animate='true'] .animateBtn {
+	position: relative;
+	overflow: hidden;
+	transition: all ease 0.7s;
+}
+
+body[data-animate='true'] .animateBtn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -5rem;
+	width: 0;
+	height: 100%;
+	background-color: rgb(var(--primary-rgb));
+	transform: skewX(35deg);
+	z-index: -1;
+	transition: width 0.9s;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 120rem;
+	min-height: 100vh;
+	min-height: 100svh;
+	margin-inline: auto;
+	padding: 7rem;
+	position: relative;
+}
+
+.cardContainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-auto-rows: auto;
+	gap: 2rem;
+	margin-top: 6rem;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.secondaryBtn:hover {
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+
+	body[data-animate='true'] .animateBtn:hover::before {
+		width: 300%;
+	}
+
+	body[data-animate='true'] .animateBtn:hover {
+		color: rgb(var(--foreground-rgb));
+		z-index: 2;
+	}
+}
+
+@media screen and (min-width: 1445px) {
+	.container {
+		max-width: 170rem;
+	}
+
+	.cardContainer {
+		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+		gap: 4rem;
+	}
+
+	.icon {
+		font-size: 2.5rem;
+	}
+}
+
+/* ================= INFINITE HORIZONTAL SCROLL LIST ============== */
+
+.scrollWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.scrollContainer {
+	overflow: hidden;
+	width: 100%;
+	max-width: 50rem;
+	margin-inline: auto;
+	padding: 1rem;
+	position: relative;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.scrollItem {
+	list-style: none;
+	width: fit-content;
+	display: inline-flex;
+	white-space: nowrap;
+	font-size: 1.5rem;
+	font-family: var(--default-font);
+	font-weight: 200;
+	color: rgb(var(--background-start-rgb), 0.5);
+	text-transform: capitalize;
+	padding: 0.5rem 1rem;
+	border: 2px solid currentColor;
+	border-radius: 1rem;
+}
+
+.scrollContainer[data-direction='backward'] {
+	animation-name: scrollLeft;
+}
+
+.scrollContainer[data-direction='forward'] {
+	animation-name: scrollRight;
+}
+
+@keyframes scrollLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+@keyframes scrollRight {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(200%);
+	}
+}

@@ -1,0 +1,149 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 140rem;
+	padding: 4rem 8rem;
+	margin-inline: auto;
+	background-color: rgb(var(--background-rgb));
+	color: rgb(var(--foreground-rgb));
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	position: relative;
+	font-family: var(--default-font);
+	text-transform: capitalize;
+}
+
+.section {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	gap: 2rem;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-block: 2rem;
+}
+
+.section:first-child {
+	border-bottom: 2px solid rgb(var(--primary-rgb), 0.15);
+}
+
+.linkGroup {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1rem;
+	padding-block: 2rem;
+}
+
+.linkIcons {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.linkGroupHeading {
+	font-size: 1.8rem;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.linkItem {
+	width: fit-content;
+	display: inline-flex;
+	gap: 1rem;
+	align-items: center;
+	font-weight: 200;
+	font-size: 1.4rem;
+	position: relative;
+}
+
+.linkItem::after {
+	content: '';
+	display: inline-block;
+	background-color: rgb(var(--primary-rgb), 0.5);
+	position: absolute;
+	z-index: 1;
+	transition: all ease 0.5s;
+	visibility: hidden;
+	width: 0%;
+	height: 2px;
+	bottom: 0;
+}
+
+.icon {
+	font-size: 1.4rem;
+}
+
+.copyright {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.linkIcons .icon {
+	transition: all ease 0.2s;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.linkItem:hover::after {
+		visibility: visible;
+		width: 100%;
+	}
+
+	.linkIcons .icon:hover {
+		color: rgb(var(--primary-rgb));
+		transform: scale(1.1);
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.linkItem::after,
+	.linkItem::before {
+		visibility: hidden;
+	}
+
+	.linkItem:hover {
+		color: rgb(var(--primary-rgb));
+	}
+}
+
+@media screen and (min-width: 1445px) {
+	.wrapper {
+		min-height: auto;
+	}
+
+	.container {
+		max-height: 44rem;
+		padding-block: 10rem;
+	}
+
+	.linkGroupHeading {
+		font-size: var(--large-font-size);
+	}
+
+	.linkItem {
+		font-size: var(--big-font-size);
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.wrapper {
+		min-height: auto;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.container {
+		padding: 4rem;
+	}
+}
