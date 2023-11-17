@@ -1,4 +1,5 @@
 // import Navbar from './components/Navbar'
+import Navbar from '@/app/components/Navbar'
 import Footer from './components/Footer'
 import CTA from './components/home/CTA'
 import Hero from './components/home/Hero'
@@ -11,6 +12,7 @@ import styles from './page.module.css'
 export default function Home() {
 	return (
 		<main className={styles.main}>
+			<Navbar />
 			<Hero />
 			<Intro />
 			<MyExperience />

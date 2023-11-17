@@ -30,14 +30,12 @@
 	gap: 4rem;
 	padding: 2rem 6rem;
 	margin-block: auto;
-	/* margin-bottom: 6rem; */
 	margin-inline: 2rem 6rem;
 	width: 100%;
 }
 
 .heroTxt {
 	width: 40%;
-	/* margin-right: auto; */
 }
 
 .title {
@@ -61,28 +59,9 @@
 	aspect-ratio: 1/1;
 	height: 100%;
 	margin: 4rem;
-	border: 5px solid rgb(var(--accent-rgb));
+	/* border: 5px solid rgb(var(--accent-rgb)); */
 	object-position: center;
 	object-fit: contain;
-}
-
-.heroImg::before {
-	content: '';
-	position: absolute;
-	right: 50%;
-	transform: translateX(50%) rotate(180deg);
-	display: inline-block;
-	z-index: 0;
-	width: 0;
-	height: 0;
-	border-left: 1.5rem solid transparent;
-	border-right: 1.5rem solid transparent;
-	border-bottom: 1.55rem solid rgba(var(--accent-rgb), 1);
-}
-
-.heroImg img {
-	display: inline-block;
-	z-index: 2;
 }
 
 .heroFooter {
@@ -93,23 +72,15 @@
 	padding: 1rem 2rem;
 }
 
-.socialGroup {
-	display: none;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
-	width: 50%;
-}
-
 .socialItem {
 	font-size: 1.5rem;
 	display: inline-block;
 }
 
 .ScrollAnim {
-	width: 1.6rem;
-	height: 2.2rem;
-	border-radius: 0.75rem;
+	width: 2.6rem;
+	height: 3.5rem;
+	border-radius: 1.5rem;
 	border: 2px solid rgb(var(--foreground-rgb));
 	display: inline-flex;
 	align-items: flex-start;
@@ -119,7 +90,7 @@
 
 .ScrollAnim::after {
 	content: '';
-	width: 5px;
+	width: 8px;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	background-color: rgb(var(--foreground-rgb));
@@ -178,8 +149,9 @@
 
 	.hero {
 		flex-direction: column;
-		/* margin-top: 8rem; */
+		margin-bottom: 5rem;
 		margin-inline: 2rem;
+		gap: 0;
 	}
 
 	.title {
@@ -194,37 +166,40 @@
 
 	.heroImg {
 		width: 50%;
+		height: 40%;
 		margin-inline: auto;
 	}
 }
 
 @media screen and (max-width: 620px) {
 	.container {
-		padding-bottom: 4rem;
+		padding-bottom: 2rem;
 	}
 
-	.hero {
+	/* .hero {
 		margin-top: 8rem;
-	}
+	} */
 
 	.title {
 		font-size: 3.5rem;
 		width: 50%;
 	}
-
-	.ScrollAnim {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 520px) {
 	.hero {
-		padding: 4rem;
+		padding-bottom: 0;
 		margin-inline: 0;
-		margin-block: auto;
+		/* margin-block: auto; */
 	}
 
 	.ScrollAnim {
-		display: inline-flex;
+		width: 1.8rem;
+		height: 2.5rem;
+		border-radius: 1.5rem;
+	}
+
+	.ScrollAnim::after {
+		width: 3px;
 	}
 }
