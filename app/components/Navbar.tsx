@@ -33,7 +33,7 @@ export default function Navbar() {
 						</Link>
 					))}
 					<a
-						href={'https:saje.hashnode.dev'}
+						href={'https://saje.hashnode.dev'}
 						target="_blank"
 						rel="noreferrer noopener"
 						className={Styles.navLink}

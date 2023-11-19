@@ -31,7 +31,7 @@
 	letter-spacing: -6px;
 	text-transform: uppercase;
 	margin-right: auto;
-	font-size: var(--large-font-size);
+	font-size: 3rem;
 }
 
 .logo span {
@@ -85,7 +85,7 @@
 
 .navToggle {
 	display: none;
-	font-size: var(--large-font-size);
+	font-size: 3rem;
 	position: relative;
 	cursor: pointer;
 }
@@ -110,13 +110,13 @@
 	.navbar {
 		background-color: rgba(4, 11, 18, 0.95);
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-		padding: 2rem 6rem;
+		padding: 4rem 6rem 3rem 8rem;
 		border-radius: 1rem;
 		flex-direction: column;
 		align-items: flex-start;
 		position: absolute;
-		right: 4rem;
-		top: 8rem;
+		right: 0;
+		top: 6rem;
 		z-index: -1;
 		transform: translateY(-200%);
 		transition: all ease-in-out 0.5s;
@@ -124,6 +124,6 @@
 
 	.mobileNav {
 		transform: translateY(0);
-		z-index: 40;
+		/* z-index: 38; */
 	}
 }

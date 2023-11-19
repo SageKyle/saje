@@ -48,7 +48,7 @@ export const playgroundObj: playgroundItemType[] = [
 		tags: ['html', 'css', 'JavaScript', 'design'],
 	},
 	{
-		name: 'calculator',
+		name: 'offline calculator',
 		desc: 'a lightweight and fast calculator built with only HTML, CSS and Javascript that is both installable and works offline.',
 		href: 'Calculator',
 		link: 'sagekyle.github.io/Calculator/',

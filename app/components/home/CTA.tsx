@@ -2,7 +2,8 @@
 
 import Styles from '@/app/assets/styles/cta.module.css'
 import Utils from '@/app/assets/styles/utils.module.css'
-import { FormEvent, useState } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { FormEvent, useRef, useState } from 'react'
 import { MdRefresh } from 'react-icons/md'
 
 type FormType = {
@@ -19,6 +20,12 @@ const initialState = {
 
 export default function CTA() {
 	const [formData, setFormData] = useState<FormType>(initialState)
+	const ref = useRef<HTMLDivElement>(null)
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ['0 1', '1.33 1'],
+	})
+	const scaleX = useTransform(scrollYProgress, [0, 1], [0.8, 1])
 
 	function handleChange(name: string, value: string): void {
 		setFormData((prev) => ({ ...prev, [name]: value }))
@@ -35,7 +42,13 @@ export default function CTA() {
 
 	return (
 		<section id="cta" aria-label="call to action" className={Styles.wrapper}>
-			<section aria-describedby="cta-desc" className={Styles.container}>
+			<motion.div
+				style={{ scale: scaleX }}
+				transition={{ opacity: scaleX }}
+				aria-describedby="cta-desc"
+				className={Styles.container}
+				ref={ref}
+			>
 				<MdRefresh
 					title="Reset Form"
 					className={Styles.refreshIcon}
@@ -105,7 +118,7 @@ export default function CTA() {
 						send
 					</button>
 				</form>
-			</section>
+			</motion.div>
 		</section>
 	)
 }

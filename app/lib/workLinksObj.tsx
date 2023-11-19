@@ -1,4 +1,5 @@
 import EcoLogo from '@/app/assets/icons/eco_logo.png'
+import EventriteLogo from '@/app/assets/icons/eventrite_logo.png'
 import GetlinkedLogo from '@/app/assets/icons/getlinked_logo.svg'
 import ontracLogo from '@/app/assets/icons/ontrac_logo.png'
 import RigLogo from '@/app/assets/icons/rig_logo.png'
@@ -18,7 +19,12 @@ export const workData: workItem[] = [
 		name: 'ECO Africa',
 		logo: EcoLogo,
 		link: 'fortheecov2.netlify.app/',
-		href: '/eco',
+		href: 'eco',
+	},
+	{
+		name: 'Eventrite',
+		logo: EventriteLogo,
+		href: 'eventrite',
 	},
 	{
 		name: 'GetLinked',
@@ -30,19 +36,19 @@ export const workData: workItem[] = [
 		name: 'onTrac',
 		logo: ontracLogo,
 		link: 'ontrac.netlify.app',
-		href: '/ontrac',
+		href: 'ontrac',
 	},
 	{
 		name: 'Rig Africa',
 		logo: RigLogo,
 		link: 'rigafrica-frontend.netlify.app/',
-		href: '/rig',
+		href: 'rig',
 	},
 	{
 		name: 'TenBits',
 		logo: TenbitsLogo,
 		link: 'tenbits.vercel.app/',
-		href: '/tenbits',
+		href: 'tenbits',
 		flag: 'coming soon',
 	},
 ]
