@@ -35,7 +35,7 @@
 }
 
 .sectionHeading {
-	font-size: var(--large-font-size);
+	font-size: 2.5rem;
 	text-transform: capitalize;
 	color: rgb(var(--primary-rgb));
 	margin-bottom: 1.5rem;
@@ -43,7 +43,7 @@
 
 .sectionTxt {
 	width: 90%;
-	font-size: 1.4rem;
+	/* font-size: 1.4rem; */
 	font-weight: 300;
 	font-family: var(--default-font);
 	margin-bottom: 2rem;
@@ -60,7 +60,7 @@
 	}
 
 	.sectionTxt {
-		font-size: var(--default-font-size);
+		/* font-size: var(--default-font-size); */
 		margin-block: 4rem;
 	}
 }

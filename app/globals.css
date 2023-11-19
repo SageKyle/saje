@@ -12,7 +12,7 @@
 	--default-font-size: 1.6rem
 	--big-font-size: 2rem
 	--large-font-size: 3rem;
-	--default-font: 'Monserrat', sans-serif;
+	--default-font: 'Montserrat', sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -39,7 +39,7 @@ body {
 	overflow-x: hidden;
 	color: rgb(var(--background-start-rgb));
 	background-color: rgb(var(--background-rgb));
-	font-size: var(--default-font-size);
+	font-size: 1.6rem;
 	position: relative;
 }
 
@@ -79,13 +79,8 @@ body::-webkit-scrollbar-thumb {
 	:root {
 		--default-font-size: 2.3rem
 	}
-	/* body {
-		font-size: 3rem;
-	} */
-}
 
-@media screen and (min-width: 620px) {
-	:root {
-		--default-font-size: 1.5rem
+	body {
+		font-size: 2.3rem;
 	}
 }

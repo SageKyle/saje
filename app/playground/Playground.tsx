@@ -46,7 +46,7 @@ export default function Playground() {
 							</a>
 							{project.link && (
 								<a
-									href={`https${project.link}`}
+									href={`https://${project.link}`}
 									target="_blank"
 									rel="noopener noreferrer"
 									className={style.linkContainer}

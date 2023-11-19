@@ -28,19 +28,18 @@
 }
 
 .sectionHeading {
-	font-size: var(--big-font-size);
+	font-size: 2.5rem;
 	text-transform: capitalize;
 	color: rgb(var(--primary-rgb));
 	margin-bottom: 1.5rem;
 }
 
 .sectionTxt {
-	font-size: var(--default-font-size);
 	font-weight: 200;
 	font-family: var(--default-font);
 	line-height: 1;
 	color: rgb(var(--background-start-rgb), 0.8);
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
 
 .sectionTxt p {
@@ -64,7 +63,7 @@
 .eco,
 .briskit,
 .openSource {
-	width: 4rem;
+	width: 5rem;
 	aspect-ratio: 1/1;
 	display: grid;
 	place-content: center;
@@ -74,14 +73,14 @@
 	border-radius: 50%;
 	border: 2px solid currentColor;
 	z-index: 1;
-	font-size: 0.61rem;
+	font-size: 1rem;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 200;
 }
 
 .eco {
 	top: 2rem;
-	right: 40%;
+	right: 45%;
 	color: rgb(98, 160, 4);
 }
 
@@ -107,7 +106,7 @@
 	}
 
 	.sectionHeading {
-		font-size: 4rem;
+		font-size: 3.5rem;
 	}
 
 	.sectionTxt {
@@ -143,6 +142,7 @@
 @media screen and (max-width: 620px) {
 	.openSource {
 		left: 10%;
+		top: 8.2rem;
 	}
 }
 
