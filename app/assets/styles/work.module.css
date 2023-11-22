@@ -42,10 +42,11 @@
 .imgContainer {
 	display: inline-block;
 	width: 100%;
-	height: 80%;
+	min-height: 80%;
 	position: relative;
 	font-style: italic;
 	background-color: rgb(var(--background-rgb), 0.5);
+	margin-inline: auto;
 }
 
 .imgContainer img {
@@ -154,11 +155,24 @@
 	font-size: 1.5rem;
 }
 
+/* IMG SLIDER SECTION */
+
 .sliderContainer {
-	display: flex;
+	display: block;
 	width: 100%;
 	min-height: 40vh;
 	margin-block: 4rem;
+	margin-inline: auto;
+}
+
+.sliderImgWrapper {
+	/* display: flex; */
+	width: 100%;
+	height: 60svh;
+	position: relative;
+	font-style: italic;
+	object-fit: fill;
+	object-position: center;
 }
 
 .textContainer {
@@ -241,7 +255,7 @@
 		flex-direction: column;
 	}
 
-	.header .icon:first-child {
+	.backBtn {
 		display: none;
 	}
 }
