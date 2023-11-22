@@ -18,7 +18,7 @@
 
 .card {
 	width: 100%;
-	height: 20rem;
+	height: 25rem;
 	padding-bottom: 2rem;
 	background-color: rgb(var(--background-start-rgb), 0.25);
 	border-radius: 0.5rem;

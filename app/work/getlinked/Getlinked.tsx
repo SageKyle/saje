@@ -2,11 +2,16 @@
 
 import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
+import Carousel from '@/app/helpers/carousel'
+import { getlinkedImages } from '@/app/lib/projectImgObj'
 import { Poppins } from 'next/font/google'
-// import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FaArrowLeft } from 'react-icons/fa6'
+import {
+	FaArrowLeft,
+	FaArrowUpRightFromSquare,
+	FaGithub,
+} from 'react-icons/fa6'
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
@@ -29,8 +34,31 @@ export default function Getlinked() {
 					<h1 className={style.title} style={poppins.style}>
 						GetLinked Pre-Hackathon Website
 					</h1>
+					<div className={style.linkGroup} aria-label="relevant links">
+						<a
+							href="https://getlinked-v0.netlify.app/"
+							target="_blank"
+							rel="noopener noreferrer"
+							title="Go to site"
+							className={`${style.icon}`}
+						>
+							<FaArrowUpRightFromSquare />
+						</a>
+						<a
+							href="https://github.com/SageKyle/getlinked"
+							target="_blank"
+							rel="noopener noreferrer"
+							title="View on GitHub"
+							className={`${style.icon}`}
+						>
+							<FaGithub />
+						</a>
+					</div>
 				</header>
-				<div className={style.sliderContainer}></div>
+				<Carousel
+					imgObj={getlinkedImages}
+					label="carousel containing screenshots from getlinked website project"
+				/>
 				<article className={style.textContainer}>
 					<p>
 						Getlinked tech hackathon{' '}
@@ -59,38 +87,6 @@ export default function Getlinked() {
 						designs.
 					</p>
 				</article>
-				<aside className={style.aside} aria-describedby="aside-heading">
-					<h4 className={style.asideHeading} id="aside-heading">
-						Related links
-					</h4>
-					<ul>
-						<li>
-							<a
-								href="https://github.com/SageKyle/getlinked"
-								target="_blank"
-								rel="noopener noreferrer"
-								className={`${style.link}`}
-							>
-								View on GitHub
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://getlinked-v0.netlify.app/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className={`${style.link}`}
-							>
-								website
-							</a>
-						</li>
-						<li>
-							<Link href={'/playground'} className={style.link}>
-								My playground
-							</Link>
-						</li>
-					</ul>
-				</aside>
 			</section>
 		</section>
 	)

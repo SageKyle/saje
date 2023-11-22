@@ -2,9 +2,9 @@
 
 import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
+import Carousel from '@/app/helpers/carousel'
+import { tenbitsImages } from '@/app/lib/projectImgObj'
 import { Poppins } from 'next/font/google'
-// import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
 	FaArrowLeft,
@@ -54,7 +54,10 @@ export default function TenBits() {
 						</a>
 					</div>
 				</header>
-				<div className={style.sliderContainer}></div>
+				<Carousel
+					imgObj={tenbitsImages}
+					label="carousel containing screenshots from tenbits coming soon page"
+				/>
 				<article className={style.textContainer}></article>
 				<p>
 					The TenBits e-Store is e-commerce management system designed

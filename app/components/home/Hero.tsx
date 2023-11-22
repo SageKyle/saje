@@ -33,7 +33,7 @@ export default function Hero() {
 					<div className={Style.hero}>
 						<article className={Style.heroTxt}>
 							<h1 className={Style.title}>
-								Frontend Developer<span style={poppins.style}>.</span>
+								Frontend Developer<span>.</span>
 							</h1>
 							<p className={Style.intro}>
 								In a world of pixels and code, I&apos;m the frontend alchemist

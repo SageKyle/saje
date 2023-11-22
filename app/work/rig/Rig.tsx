@@ -2,9 +2,9 @@
 
 import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
+import Carousel from '@/app/helpers/carousel'
+import { rigImages } from '@/app/lib/projectImgObj'
 import { Poppins } from 'next/font/google'
-// import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaArrowLeft } from 'react-icons/fa6'
 
@@ -30,7 +30,10 @@ export default function Rig() {
 						Rig Africa
 					</h1>
 				</header>
-				<div className={style.sliderContainer}></div>
+				<Carousel
+					imgObj={rigImages}
+					label="carousel containing screenshots from rig africa website"
+				/>
 				<article className={style.textContainer}>
 					<p>
 						Rig Africa is a branch of the Rig Nation religious organization. The
