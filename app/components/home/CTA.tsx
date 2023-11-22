@@ -1,5 +1,6 @@
 'use client'
 
+import { sendEmail } from '@/app/api/send/route'
 import Styles from '@/app/assets/styles/cta.module.css'
 import Utils from '@/app/assets/styles/utils.module.css'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -31,9 +32,10 @@ export default function CTA() {
 		setFormData((prev) => ({ ...prev, [name]: value }))
 	}
 
-	function handleSubmit(e: FormEvent): void {
+	async function handleSubmit(e: FormEvent) {
 		e.preventDefault()
 		console.log(formData)
+		await sendEmail(formData)
 	}
 
 	function clearForm(): void {

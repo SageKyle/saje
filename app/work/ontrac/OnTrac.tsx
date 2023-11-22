@@ -2,9 +2,9 @@
 
 import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
+import Carousel from '@/app/helpers/carousel'
+import { ontracImages } from '@/app/lib/projectImgObj'
 import { Poppins } from 'next/font/google'
-// import Image from 'next/image'
-// import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
 	FaArrowLeft,
@@ -25,7 +25,7 @@ export default function OnTrac() {
 			<section className={utils.container}>
 				<header className={style.header}>
 					<FaArrowLeft
-						className={utils.icon}
+						className={`${style.icon} ${style.backBtn}`}
 						title="Back to previous page"
 						role="navigation"
 						onClick={goBack}
@@ -54,7 +54,7 @@ export default function OnTrac() {
 						</a>
 					</div>
 				</header>
-				<div className={style.sliderContainer}></div>
+				<Carousel imgObj={ontracImages} label="ontrac project image carousel" />
 				<article className={style.textContainer}>
 					<p>
 						OnTrac is an intuitively simple personal manager that makes it
