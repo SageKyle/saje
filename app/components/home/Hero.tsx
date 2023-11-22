@@ -23,7 +23,7 @@ export default function Hero() {
 		return () => {
 			window.removeEventListener('scroll', onScroll)
 		}
-	}, [])
+	}, [onScroll])
 
 	return (
 		<>
