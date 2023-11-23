@@ -1,15 +1,16 @@
 import styles from '@/app/page.module.css'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import CTA from '../components/home/CTA'
+import MyTools from '../components/home/MyTools'
+import About from './About'
 
 export default function page() {
 	return (
 		<>
 			<Navbar />
 			<main className={styles.main}>
-				{/* <Hero /> */}
-				<CTA />
+				<About />
+				<MyTools />
 			</main>
 			<Footer />
 		</>

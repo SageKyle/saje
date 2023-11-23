@@ -41,7 +41,7 @@
 	transform: rotate(60deg);
 	position: absolute;
 	bottom: 5rem;
-	left: 10%;
+	left: 30%;
 	z-index: 1;
 }
 
@@ -66,6 +66,7 @@
 	width: 90%;
 	font-weight: 300;
 	font-family: var(--default-font);
+	margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 1445px) {
