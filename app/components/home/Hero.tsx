@@ -2,8 +2,10 @@
 
 import Avatar from '@/app/assets/images/saje-avatar.png'
 import Style from '@/app/assets/styles/hero.module.css'
+import utils from '@/app/assets/styles/utils.module.css'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
@@ -40,6 +42,14 @@ export default function Hero() {
 								who transforms your ideas into web gold. From JavaScript sorcery
 								to Next.js wizardry, I&apos;m here to make it magical.
 							</p>
+							<div className={Style.btnContainer}>
+								<Link href={'/contact'} className={utils.primaryBtn}>
+									contact me
+								</Link>
+								<Link href={'/contact'} className={utils.secondaryBtn}>
+									resume
+								</Link>
+							</div>
 						</article>
 						<section className={Style.heroImg}>
 							<Image src={Avatar} alt="Paul Saje avatar" loading="lazy" fill />

@@ -53,6 +53,15 @@
 	font-weight: 300;
 }
 
+.btnContainer {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+	margin-block: 2rem;
+}
+
 .heroImg {
 	display: flex;
 	position: relative;

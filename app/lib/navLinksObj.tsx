@@ -6,6 +6,7 @@ type navLinksType = {
 export const navLinks: navLinksType[] = [
 	// { text: 'home', link: '/' },
 	{ text: 'my work', link: '/work' },
-	{ text: 'shelf', link: '/shelf' },
 	{ text: 'contact', link: '/contact' },
+	{ text: 'about', link: '/about' },
+	{ text: 'shelf', link: '/shelf' },
 ]
