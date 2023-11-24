@@ -1,7 +1,7 @@
 import Image from 'next/image'
 // import Link from 'next/link'
 
-import Avatar from '@/app/assets/images/saje.jpg'
+import Avatar from '@/app/assets/images/saje-img.png'
 import Style from '@/app/assets/styles/hero.module.css'
 import utils from '@/app/assets/styles/utils.module.css'
 

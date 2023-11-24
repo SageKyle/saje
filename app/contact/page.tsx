@@ -1,6 +1,5 @@
 'use client'
 
-import { sendEmail } from '@/app/api/send/route'
 import contact from '@/app/assets/styles/contact.module.css'
 import Utils from '@/app/assets/styles/utils.module.css'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -38,7 +37,6 @@ export default function Contact() {
 	async function handleSubmit(e: FormEvent) {
 		e.preventDefault()
 		console.log(formData)
-		await sendEmail(formData)
 	}
 
 	return (

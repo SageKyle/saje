@@ -1,13 +1,13 @@
 'use client'
 
 import Scroller from '@/app/helpers/Scroller'
-import { Skills } from '@/app/lib/SkillsObj'
+import { skills } from '@/app/lib/SkillsObj'
 
 export default function Tools() {
 	return (
 		<div>
-			<Scroller scrollItems={Skills} direction="forward" />
-			<Scroller scrollItems={Skills} direction="backward" />
+			<Scroller scrollItems={skills} direction="forward" />
+			<Scroller scrollItems={skills} direction="backward" />
 		</div>
 	)
 }

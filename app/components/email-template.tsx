@@ -4,9 +4,7 @@ export type EmailTemplateProps = {
 	message: string
 }
 
-export function EmailTemplate(
-	props: Readonly<EmailTemplateProps>
-): JSX.Element {
+export function EmailTemplate(props: EmailTemplateProps) {
 	return (
 		<section>
 			<h1>New form submission from {props.name}</h1>

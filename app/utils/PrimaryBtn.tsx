@@ -1,3 +1,5 @@
+'use client'
+
 import Utils from '@/app/assets/styles/utils.module.css'
 import Link from 'next/link'
 
