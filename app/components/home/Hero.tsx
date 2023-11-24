@@ -71,11 +71,17 @@ export default function Hero() {
 							</div>
 						</article>
 						<section className={Style.heroImg}>
-							<Image src={Avatar} alt="Paul Saje avatar" loading="lazy" fill />
+							<Image
+								src={Avatar}
+								alt="Paul Saje avatar"
+								loading="lazy"
+								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							/>
 						</section>
 					</div>
 					<article className={Style.heroFooter} style={{ display: isVisible }}>
-						<div className={Style.ScrollAnim} aria-hidden></div>
+						<div className={Style.ScrollAnim} aria-hidden="true"></div>
 					</article>
 				</div>
 			</section>

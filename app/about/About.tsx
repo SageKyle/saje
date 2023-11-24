@@ -37,7 +37,13 @@ export default function About() {
 						</div>
 					</article>
 					<section className={Style.heroImg}>
-						<Image src={Avatar} alt="Paul Saje avatar" loading="lazy" fill />
+						<Image
+							src={Avatar}
+							alt="Paul Saje avatar"
+							loading="lazy"
+							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+						/>
 					</section>
 				</div>
 			</div>

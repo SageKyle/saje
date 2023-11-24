@@ -46,8 +46,8 @@ export default function Intro() {
 						Over the years, technical writing has provided a way for me to go
 						deeper into any topic, and satisfy my curiousity about that tool,
 						while also sharing the knowledge with others.
-						<br aria-hidden />
-						<br aria-hidden />
+						<br aria-hidden="true" />
+						<br aria-hidden="true" />
 						<em>It&apos;s always a win-win-win! (~_^)</em>
 					</p>
 					<PrimaryBtn text="my shelf" href="/shelf" />

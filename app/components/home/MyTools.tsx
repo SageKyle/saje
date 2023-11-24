@@ -11,11 +11,7 @@ export default function MyTools() {
 		>
 			<article>
 				<Scroller scrollItems={Skills} direction="forward" />
-				<Scroller
-					scrollItems={Skills}
-					direction="backward"
-					extraProps={['aria-hidden="true"']}
-				/>
+				<Scroller scrollItems={Skills} direction="backward" />
 			</article>
 		</section>
 	)
