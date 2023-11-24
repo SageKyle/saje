@@ -1,3 +1,5 @@
+'use client'
+
 import utils from '@/app/assets/styles/utils.module.css'
 
 type scrollerPropType = {

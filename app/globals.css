@@ -9,10 +9,10 @@
 	--background-end-rgb: 255, 255, 255;
 	--background-rgb: 8, 19, 31;
 	--primary-rgb: 250, 128, 114;
-	/* --primary-rgb: 238, 3, 3; */
+	/* --primary-rgb: 234, 60, 38; */
 	--accent-rgb: 32, 16, 10;
-	--default-font-size: 1.6rem
-	--big-font-size: 2rem
+	--default-font-size: 1.6rem;
+	--big-font-size: 2rem;
 	--large-font-size: 3rem;
 	--default-font: 'Montserrat', sans-serif;
 }
@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 1445px) {
 	:root {
-		--default-font-size: 2.3rem
+		--default-font-size: 2.3rem;
 	}
 
 	body {

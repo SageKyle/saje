@@ -1,3 +1,5 @@
+'use client'
+
 import style from '@/app/assets/styles/work.module.css'
 import { projectImage } from '@/app/lib/projectImgObj'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
