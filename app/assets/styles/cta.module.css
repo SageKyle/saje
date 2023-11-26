@@ -117,6 +117,12 @@
 	border-color: rgb(250, 128, 114);
 }
 
+.input:disabled,
+.formBtn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
 /* style label of active (current focused) input */
 .form label:has(.input:focus) > span {
 	color: rgb(var(--primary-rgb));
@@ -151,6 +157,22 @@
 	cursor: pointer;
 	font-size: var(--default-font-size);
 	margin-top: 4rem;
+}
+
+.loading {
+	font-size: 2rem;
+	display: inline-block;
+	animation: rotate 0.5s ease 0.1s infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(-360deg);
+	}
+
+	to {
+		transform: rotate(0deg);
+	}
 }
 
 @media screen and (min-width: 1445px) {

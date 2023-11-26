@@ -13,6 +13,7 @@
 	height: 100vh;
 	height: 100svh;
 	margin-inline: auto;
+	padding-top: 3rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -32,11 +33,17 @@
 	margin-block: auto;
 	margin-inline: 2rem 6rem;
 	width: 100%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--default-font);
 }
 
 .heroTxt {
-	width: 40%;
+	width: 55%;
+}
+
+.heading {
+	font-size: var(--default-font-size);
+	font-weight: 200;
+	text-decoration: underline;
 }
 
 .title {
@@ -49,7 +56,7 @@
 }
 
 .intro {
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: 300;
 }
 
@@ -58,8 +65,9 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 2rem;
-	margin-block: 2rem;
+	gap: 4rem;
+	margin-block: 3rem;
+	flex-wrap: wrap;
 }
 
 .heroImg {
@@ -68,7 +76,6 @@
 	aspect-ratio: 1/1;
 	height: 100%;
 	margin: 4rem;
-	/* border: 5px solid rgb(var(--accent-rgb)); */
 	object-position: center;
 	object-fit: contain;
 }
@@ -78,12 +85,7 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem 2rem;
-}
-
-.socialItem {
-	font-size: 1.5rem;
-	display: inline-block;
+	padding: 1rem;
 }
 
 .ScrollAnim {
@@ -99,7 +101,7 @@
 
 .ScrollAnim::after {
 	content: '';
-	width: 8px;
+	width: 6px;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	background-color: rgb(var(--foreground-rgb));
@@ -185,10 +187,6 @@
 		padding-bottom: 2rem;
 	}
 
-	/* .hero {
-		margin-top: 8rem;
-	} */
-
 	.title {
 		font-size: 3.5rem;
 		width: 50%;
@@ -199,7 +197,6 @@
 	.hero {
 		padding-bottom: 0;
 		margin-inline: 0;
-		/* margin-block: auto; */
 	}
 
 	.ScrollAnim {

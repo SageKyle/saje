@@ -50,18 +50,13 @@ export default function Footer() {
 						<Link href={'/resume'} className={`${Styles.linkItem}`}>
 							My Resume
 						</Link>
-						<a
-							href="https://saje.hashnode.dev"
-							target="_blank"
-							rel="noopener noreferrer"
-							className={`${Styles.linkItem}`}
-						>
-							Blog
-						</a>
 					</section>
-					{/* <section className={`${Styles.linkGroup}`}>
+					<section className={`${Styles.linkGroup}`}>
 						<Link href={'/contact'} className={`${Styles.linkItem}`}>
 							Contact Me
+						</Link>
+						<Link href={'/about'} className={`${Styles.linkItem}`}>
+							About Me
 						</Link>
 						<a
 							href="https://saje.hashnode.dev"
@@ -71,7 +66,7 @@ export default function Footer() {
 						>
 							Blog
 						</a>
-					</section> */}
+					</section>
 				</article>
 				<div className={`${Styles.section}`}>
 					<small className={`${Styles.copyright}`}>&copy; Paul Saje 2023</small>

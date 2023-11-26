@@ -3,11 +3,12 @@
 import Avatar from '@/app/assets/images/saje.png'
 import Style from '@/app/assets/styles/hero.module.css'
 import utils from '@/app/assets/styles/utils.module.css'
-import { Poppins } from 'next/font/google'
+import { Poppins, Public_Sans } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 
+const sans = Public_Sans({ weight: '600', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export default function Hero() {
@@ -31,16 +32,19 @@ export default function Hero() {
 		<>
 			<section aria-label="hero section" className={Style.wrapper}>
 				<div className={Style.container} onScroll={onScroll}>
-					{/* <Navbar /> */}
 					<div className={Style.hero}>
 						<article className={Style.heroTxt}>
-							<h1 className={Style.title}>
-								Frontend Developer<span>.</span>
+							<h1 className={Style.heading}>Frontend Engineer</h1>
+							<h1 className={Style.title} style={sans.style}>
+								I build accessible, performant websites
+								<span className={poppins.className}>.</span>
 							</h1>
 							<p className={Style.intro}>
-								In a world of pixels and code, I&apos;m the frontend alchemist
-								who transforms your ideas into web gold. From JavaScript sorcery
-								to Next.js wizardry, I&apos;m here to make it magical.
+								<strong>Hi there! </strong> I&apos;m Paul Saje. I am a frontend
+								engineer with a unique proficiency for building quality,
+								accessible, and user-friendly web applications, with a focus on
+								usability and a touch of maintainability. I&apos;m currently
+								available for full-time and contract developer roles.
 							</p>
 							<div className={Style.btnContainer}>
 								<a
@@ -88,3 +92,6 @@ export default function Hero() {
 		</>
 	)
 }
+// In a world of pixels and code, I&apos;m the frontend alchemist
+// who transforms your ideas into web gold. From JavaScript sorcery
+// to Next.js wizardry, I&apos;m here to make it magical.

@@ -3,7 +3,7 @@
 import Styles from '@/app/assets/styles/cta.module.css'
 import Utils from '@/app/assets/styles/utils.module.css'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { FormEvent, useRef, useState } from 'react'
+import { FormEvent, KeyboardEventHandler, useRef, useState } from 'react'
 import { MdRefresh } from 'react-icons/md'
 
 type FormType = {
@@ -20,6 +20,8 @@ const initialState = {
 
 export default function CTA() {
 	const [formData, setFormData] = useState<FormType>(initialState)
+	const [isLoading, setIsloading] = useState(false)
+	const [error, setError] = useState<null | string>(null)
 	const ref = useRef<HTMLDivElement>(null)
 	const { scrollYProgress } = useScroll({
 		target: ref,
@@ -33,7 +35,33 @@ export default function CTA() {
 
 	async function handleSubmit(e: FormEvent) {
 		e.preventDefault()
-		console.log(formData)
+		setError(null)
+		setIsloading(true)
+		try {
+			const response = await fetch('/api/send', {
+				method: 'POST',
+				headers: {
+					'content-type': 'application/json',
+				},
+				body: JSON.stringify(formData),
+			})
+			if (!response.ok) {
+				throw new Error('unable to submit form')
+			}
+		} catch (err: any) {
+			alert('unable to submit form!')
+			console.error(err)
+			setError(err.message)
+		} finally {
+			setIsloading(false)
+			clearForm()
+		}
+	}
+
+	function enterToSubmit(evnt: any) {
+		if (evnt.ctrlKey && evnt.key === 'Enter') {
+			handleSubmit(evnt)
+		}
 	}
 
 	function clearForm(): void {
@@ -61,7 +89,11 @@ export default function CTA() {
 				<p id="cta-desc" className={Styles.desc}>
 					Got a question or proposal, or just want to say hello? Go ahead.
 				</p>
-				<form className={Styles.form} onSubmit={handleSubmit}>
+				<form
+					className={Styles.form}
+					onSubmit={handleSubmit}
+					onKeyDown={enterToSubmit}
+				>
 					<fieldset>
 						<label>
 							<span>your name</span>
@@ -69,6 +101,7 @@ export default function CTA() {
 								className={Styles.input}
 								type="text"
 								name="name"
+								disabled={isLoading}
 								value={formData.name}
 								onChange={(e) => handleChange('name', e.target.value)}
 								placeholder="John Doe"
@@ -85,6 +118,7 @@ export default function CTA() {
 								className={Styles.input}
 								type="email"
 								name="email"
+								disabled={isLoading}
 								value={formData.email}
 								onChange={(e) => handleChange('email', e.target.value)}
 								placeholder="example@email.com"
@@ -102,6 +136,7 @@ export default function CTA() {
 								autoComplete="on"
 								title="What do you have in mind?"
 								name="message"
+								disabled={isLoading}
 								value={formData.message}
 								onChange={(e) => handleChange('message', e.target.value)}
 								placeholder="Hi Saje, We would love to have you on our team as a Frontend developer as soon as possible"
@@ -112,12 +147,14 @@ export default function CTA() {
 					</fieldset>
 					<button
 						type="submit"
-						disabled={formData === initialState}
+						disabled={isLoading}
 						className={`${Utils.secondaryBtn} ${Utils.animateBtn} ${Styles.formBtn}`}
 					>
-						send
+						{isLoading ? <MdRefresh className={Styles.loading} /> : 'send'}
 					</button>
+					<br />
 				</form>
+				{error && <p>{error}</p>}
 			</motion.div>
 		</section>
 	)

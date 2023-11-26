@@ -1,5 +1,6 @@
 'use client'
 
+// import resume from '@/app/assets/docs/resume.pdf'
 import utils from '@/app/assets/styles/utils.module.css'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
@@ -33,16 +34,8 @@ export default function Navbar() {
 							{link.text}
 						</Link>
 					))}
-					<a
-						href={'https://saje.hashnode.dev'}
-						target="_blank"
-						rel="noreferrer noopener"
-						className={Styles.navLink}
-					>
-						blog
-					</a>
-					<a
-						href="https://docs.google.com/document/d/1wg43AyIUQ81EnfTUH9AtWXp4sK_zgF7eX5h3d3jkNug/"
+					<Link
+						href="../assets/docs/resume.pdf"
 						target="_blank"
 						rel="noreferrer noopener"
 						className={utils.primaryBtn}
@@ -65,7 +58,7 @@ export default function Navbar() {
 								strokeLinejoin="round"
 							></path>
 						</svg>
-					</a>
+					</Link>
 				</nav>
 
 				<MdMenu

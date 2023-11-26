@@ -95,7 +95,8 @@ body[data-animate='true'] .animateBtn::before {
 
 	.secondaryBtn:hover {
 		font-weight: bold;
-		letter-spacing: 3px;
+		outline-color: rgb(var(--primary-rgb));
+		/* letter-spacing: 3px; */
 	}
 
 	body[data-animate='true'] .animateBtn:hover::before {
