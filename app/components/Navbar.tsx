@@ -34,8 +34,8 @@ export default function Navbar() {
 							{link.text}
 						</Link>
 					))}
-					<Link
-						href="../assets/docs/resume.pdf"
+					<a
+						href="./docs/resume.pdf"
 						target="_blank"
 						rel="noreferrer noopener"
 						className={utils.primaryBtn}
@@ -58,7 +58,7 @@ export default function Navbar() {
 								strokeLinejoin="round"
 							></path>
 						</svg>
-					</Link>
+					</a>
 				</nav>
 
 				<MdMenu

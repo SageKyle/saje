@@ -47,7 +47,12 @@ export default function Footer() {
 						<Link href={'/shelf'} className={`${Styles.linkItem}`}>
 							shelf
 						</Link>
-						<Link href={'/resume'} className={`${Styles.linkItem}`}>
+						<Link
+							href="./docs/resume.pdf"
+							target="_blank"
+							rel="noreferrer noopener"
+							className={`${Styles.linkItem}`}
+						>
 							My Resume
 						</Link>
 					</section>

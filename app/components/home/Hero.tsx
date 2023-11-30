@@ -53,7 +53,14 @@ export default function Hero() {
 								>
 									contact me
 								</a>
-								<Link href={'/contact'} className={utils.secondaryBtn}>
+								<Link
+									href="./docs/resume.pdf"
+									target="_blank"
+									rel="noreferrer noopener"
+									download={true}
+									className={utils.secondaryBtn}
+									title="Download my resume"
+								>
 									<span>resume</span>
 									<svg
 										width="17"
