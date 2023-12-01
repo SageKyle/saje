@@ -11,18 +11,20 @@ type scrollerPropType = {
 export default function Scroller(props: scrollerPropType) {
 	return (
 		<article {...props.extraProps} className={utils.scrollWrapper}>
-			<ul className={utils.scrollContainer} data-direction={props.direction}>
+			<div className={utils.scrollContainer} data-direction={props.direction}>
 				{props.scrollItems.map((item) => (
-					<li key={item} className={utils.scrollItem}>
+					<span key={item} className={utils.scrollItem}>
 						{item}
-					</li>
+					</span>
 				))}
+			</div>
+			<div className={utils.scrollContainer} data-direction={props.direction}>
 				{props.scrollItems.map((item) => (
-					<li key={item} className={utils.scrollItem} aria-hidden="true">
+					<span key={item} className={utils.scrollItem}>
 						{item}
-					</li>
+					</span>
 				))}
-			</ul>
+			</div>
 		</article>
 	)
 }

@@ -6,7 +6,7 @@ import Hero from './components/home/Hero'
 import Intro from './components/home/Intro'
 import MyExperience from './components/home/MyExperience'
 import MyTools from './components/home/MyTools'
-import Summary from './components/home/Summary'
+// import Summary from './components/home/Summary'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
 		<main className={styles.main}>
 			<Navbar />
 			<Hero />
+			<MyTools />
 			<Intro />
 			<MyExperience />
 			{/* <Summary /> */}
