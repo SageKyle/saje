@@ -9,7 +9,7 @@
 
 .container {
 	width: 100%;
-	max-width: 120rem;
+	max-width: 165rem;
 	height: 100vh;
 	height: 100svh;
 	margin-inline: auto;
@@ -148,11 +148,20 @@
 		margin-top: 4rem;
 	}
 
+	.heroImg {
+		height: 70%;
+	}
+
 	.ScrollAnim {
 		display: none;
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.title {
+		font-size: 3.5rem;
+	}
+}
 @media screen and (max-width: 920px) {
 	.container {
 		padding-bottom: 4rem;
@@ -160,14 +169,13 @@
 
 	.hero {
 		flex-direction: column;
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 		margin-inline: 2rem;
 		gap: 0;
 	}
 
 	.title {
 		font-size: 5rem;
-		width: 50%;
 	}
 
 	.heroTxt {
@@ -187,9 +195,15 @@
 		padding-bottom: 2rem;
 	}
 
+	.hero {
+		padding-inline: 3rem;
+	}
 	.title {
 		font-size: 3.5rem;
-		width: 50%;
+	}
+
+	.btnContainer {
+		gap: 2rem;
 	}
 }
 
@@ -207,6 +221,23 @@
 
 	.ScrollAnim::after {
 		width: 3px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.title {
+		font-size: 2.5rem;
+	}
+
+	.intro {
+		font-size: 1.65rem;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.container {
+		height: auto;
+		padding-top: 10rem;
 	}
 }
 

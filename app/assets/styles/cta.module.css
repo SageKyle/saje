@@ -16,7 +16,7 @@
 
 .container {
 	width: 80%;
-	max-width: 140rem;
+	max-width: 165rem;
 	padding: 4rem;
 	margin-inline: auto;
 	background-color: rgb(var(--background-rgb));
@@ -176,13 +176,19 @@
 }
 
 @media screen and (min-width: 1445px) {
+	.wrapper {
+		padding: 20rem;
+		min-height: auto;
+	}
+
 	.container {
-		padding: 6rem;
+		padding: 5rem;
 	}
 
 	.refreshIcon {
 		right: 4rem;
 		top: 4rem;
+		font-size: 5rem;
 	}
 
 	.title {
@@ -192,7 +198,6 @@
 
 @media screen and (max-width: 920px) {
 	.wrapper {
-		/* padding-block: 2rem; */
 		min-height: auto;
 	}
 

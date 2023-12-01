@@ -1,8 +1,6 @@
 .wrapper {
 	width: 100%;
 	display: flex;
-	/* grid-template-columns: 100%;
-	place-content: center; */
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
@@ -12,7 +10,7 @@
 
 .container {
 	width: 100%;
-	max-width: 120rem;
+	max-width: 165rem;
 	margin-inline: auto;
 	padding: 2rem 3rem;
 	display: flex;

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-// import Link from 'next/link'
 
 import Avatar from '@/app/assets/images/saje-img.png'
 import Style from '@/app/assets/styles/hero.module.css'
@@ -8,8 +7,10 @@ import utils from '@/app/assets/styles/utils.module.css'
 export default function About() {
 	return (
 		<section aria-label="hero section" className={Style.wrapper}>
-			<div className={Style.container}>
-				{/* <Navbar /> */}
+			<div
+				className={Style.container}
+				style={{ height: 'auto', paddingTop: '10rem' }}
+			>
 				<div className={Style.hero}>
 					<article className={Style.heroTxt}>
 						<h1 className={Style.title}>

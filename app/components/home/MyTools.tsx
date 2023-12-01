@@ -9,7 +9,7 @@ export default function MyTools() {
 			className=""
 			aria-label="a list of technologies and tools I've worked with"
 		>
-			<article>
+			<article style={{ maxWidth: '165rem', marginInline: 'auto' }}>
 				<Scroller scrollItems={skills} direction="forward" />
 				<Scroller scrollItems={skills} direction="backward" />
 			</article>

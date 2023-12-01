@@ -9,7 +9,7 @@
 
 .container {
 	width: 100%;
-	max-width: 140rem;
+	max-width: 165rem;
 	padding: 4rem 8rem;
 	margin-inline: auto;
 	background-color: rgb(var(--background-rgb));

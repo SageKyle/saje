@@ -1,36 +1,39 @@
 .primaryBtn {
-	width: fit-content;
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
 	color: rgb(var(--foreground-rgb));
 	background-color: rgb(var(--primary-rgb));
-	padding: 1rem 2rem;
-	border-radius: 0.2rem;
 	text-transform: capitalize;
-	border: 0;
 	border-radius: 0.5rem;
 	font-weight: 400;
-	letter-spacing: 2px;
-	font-family: var(--default-font);
 	font-size: 1.8rem;
-	transition: all ease 0.4s;
 }
 
 .secondaryBtn {
+	color: rgb(var(--primary-rgb));
+	text-transform: uppercase;
+	outline: 2px solid rgb(var(--foreground-rgb), 0.5);
+}
+
+.primaryBtn,
+.secondaryBtn {
 	font-family: var(--default-font);
+	letter-spacing: 2px;
+	white-space: nowrap;
 	width: fit-content;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	color: rgb(var(--primary-rgb));
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	outline: 2px solid rgb(var(--foreground-rgb), 0.5);
-	border: 0;
 	padding: 1rem 2rem;
+	border: 0;
 	border-radius: 0.2rem;
 	transition: all ease 0.4s;
+}
+
+@media screen and (max-width: 620px) {
+	.primaryBtn,
+	.secondaryBtn {
+		font-size: 1.65rem;
+		padding: 0.8rem 1.5rem;
+	}
 }
 
 .icon {
