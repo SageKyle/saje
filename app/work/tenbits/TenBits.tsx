@@ -22,10 +22,10 @@ export default function TenBits() {
 
 	return (
 		<section className={utils.wrapper}>
-			<section className={utils.container}>
+			<section className={`${utils.container} ${style.container}`}>
 				<header className={style.header}>
 					<FaArrowLeft
-						className={utils.icon}
+						className={style.backIcon}
 						title="Back to previous page"
 						role="navigation"
 						onClick={goBack}
@@ -58,20 +58,21 @@ export default function TenBits() {
 					imgObj={tenbitsImages}
 					label="carousel containing screenshots from tenbits coming soon page"
 				/>
-				<article className={style.textContainer}></article>
-				<p>
-					The TenBits e-Store is e-commerce management system designed
-					specifically to help small businesses scale their business online by
-					making it very easy for them to create and customize their own online
-					store without any technical knowledge.
-				</p>
-				<p>
-					The purpose is to help business owners who cannot afford a
-					custom-built e-commerce web app, by providing pre-built templates and
-					all the tools they need to setup their online presence.
-				</p>
-				<br />
-				<h4>Coming soon...</h4>
+				<article className={style.textContainer}>
+					<p>
+						The TenBits e-Store is e-commerce management system designed
+						specifically to help small businesses scale their business online by
+						making it very easy for them to create and customize their own
+						online store without any technical knowledge.
+					</p>
+					<p>
+						The purpose is to help business owners who cannot afford a
+						custom-built e-commerce web app, by providing pre-built templates
+						and all the tools they need to setup their online presence.
+					</p>
+					<br />
+					<h4>Coming soon...</h4>
+				</article>
 			</section>
 		</section>
 	)

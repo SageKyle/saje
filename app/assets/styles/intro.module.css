@@ -90,7 +90,8 @@
 	}
 
 	.container {
-		min-height: 70rem;
+		max-height: none;
+		height: auto;
 		align-items: center;
 		grid-template-columns: auto;
 	}
@@ -106,13 +107,17 @@
 		left: 60%;
 		opacity: 0.2;
 	}
+
+	.section {
+		margin-bottom: 5rem;
+	}
+
+	.sectionTxt {
+		margin-bottom: 4rem;
+	}
 }
 
 @media screen and (max-width: 620px) {
-	.container {
-		min-height: 66rem;
-	}
-
 	.container::before {
 		right: 54%;
 		top: -6%;

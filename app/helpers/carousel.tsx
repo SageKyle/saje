@@ -15,7 +15,7 @@ export default function Carousel({ imgObj, label }: carouselProps) {
 		<div className={style.sliderContainer}>
 			<Splide
 				options={{
-					rewind: true,
+					// rewind: true,
 					autoplay: true,
 					perPage: 1,
 					pauseOnFocus: true,

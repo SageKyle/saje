@@ -22,10 +22,10 @@ export default function OnTrac() {
 
 	return (
 		<section className={utils.wrapper}>
-			<section className={utils.container}>
+			<section className={`${utils.container} ${style.container}`}>
 				<header className={style.header}>
 					<FaArrowLeft
-						className={`${style.icon} ${style.backBtn}`}
+						className={style.backIcon}
 						title="Back to previous page"
 						role="navigation"
 						onClick={goBack}

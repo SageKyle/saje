@@ -1,7 +1,7 @@
 .wrapper {
 	width: 100%;
-	min-height: 100vh;
-	min-height: 100svh;
+	/* min-height: 100vh;
+	min-height: 100svh; */
 	display: grid;
 	grid-template-columns: 100%;
 	place-content: center;
@@ -122,7 +122,6 @@
 		grid-template-columns: auto;
 		padding-block: 4rem;
 		min-height: auto;
-		max-height: 88rem;
 	}
 
 	.imgWrapper {
