@@ -1,5 +1,8 @@
+'use client'
+
 import style from '@/app/assets/styles/shelf.module.css'
 import utils from '@/app/assets/styles/utils.module.css'
+import { motion } from 'framer-motion'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 
@@ -17,7 +20,15 @@ export default function Shelf() {
 				</h2>
 				<p>Some of my most popular articles.</p>
 				<article className={utils.cardContainer}>
-					<a
+					<motion.a
+						initial={{ opacity: 0, y: '50%' }}
+						whileInView={{ y: 0, opacity: 1 }}
+						transition={{
+							delay: 0.1,
+							duration: 0.51,
+						}}
+						viewport={{ once: true }}
+						layout
 						href="https://saje.hashnode.dev/create-reusable-html-components-with-javascript"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -37,8 +48,16 @@ export default function Shelf() {
 						<h5 className={`${poppins.className} ${style.title}`}>
 							How To Create Reusable HTML Components Using Only JavaScript
 						</h5>
-					</a>
-					<a
+					</motion.a>
+					<motion.a
+						initial={{ opacity: 0, y: '50%' }}
+						whileInView={{ y: 0, opacity: 1 }}
+						transition={{
+							delay: 0.2,
+							duration: 0.51,
+						}}
+						viewport={{ once: true }}
+						layout
 						href="https://saje.hashnode.dev/css-currentcolor"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -58,8 +77,16 @@ export default function Shelf() {
 						<h5 className={`${poppins.className} ${style.title}`}>
 							CSS currentColor in 3 minutes
 						</h5>
-					</a>
-					<a
+					</motion.a>
+					<motion.a
+						initial={{ opacity: 0, y: '50%' }}
+						whileInView={{ y: 0, opacity: 1 }}
+						transition={{
+							delay: 0.3,
+							duration: 0.51,
+						}}
+						viewport={{ once: true }}
+						layout
 						href="https://saje.hashnode.dev/logical-assignment-operators"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -79,8 +106,16 @@ export default function Shelf() {
 						<h5 className={`${poppins.className} ${style.title}`}>
 							Understanding logical assignment operators
 						</h5>
-					</a>
-					<a
+					</motion.a>
+					<motion.a
+						initial={{ opacity: 0, y: '50%' }}
+						whileInView={{ y: 0, opacity: 1 }}
+						transition={{
+							delay: 0.4,
+							duration: 0.51,
+						}}
+						viewport={{ once: true }}
+						layout
 						href="https://saje.hashnode.dev/useid-hook"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -100,8 +135,16 @@ export default function Shelf() {
 						<h5 className={`${poppins.className} ${style.title}`}>
 							useId: an overview of the accessibility hook
 						</h5>
-					</a>
-					<a
+					</motion.a>
+					<motion.a
+						initial={{ opacity: 0, y: '50%' }}
+						whileInView={{ y: 0, opacity: 1 }}
+						transition={{
+							delay: 0.5,
+							duration: 0.51,
+						}}
+						viewport={{ once: true }}
+						layout
 						href="https://saje.hashnode.dev/all-about-crash-courses"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -121,7 +164,7 @@ export default function Shelf() {
 						<h5 className={`${poppins.className} ${style.title}`}>
 							Getting Into Tech: Why A Crash Course Is A Bad Idea
 						</h5>
-					</a>
+					</motion.a>
 				</article>
 				<p className={style.linkToBlog}>
 					Read more on{' '}

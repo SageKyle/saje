@@ -1,5 +1,8 @@
+'use client'
+
 import utils from '@/app/assets/styles/utils.module.css'
 import style from '@/app/assets/styles/work.module.css'
+import { motion } from 'framer-motion'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,8 +26,16 @@ export default function Work() {
 					contributed to shaping my career.
 				</p>
 				<article className={utils.cardContainer}>
-					{workData.map((work) => (
-						<div
+					{workData.map((work, index) => (
+						<motion.div
+							initial={{ opacity: 0, y: '50%' }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{
+								delay: index / 2,
+								duration: 0.51,
+							}}
+							viewport={{ once: true }}
+							layout
 							key={work.href}
 							className={style.card}
 							aria-description="a card showcasing individual project/work I've worked on or participated in"
@@ -50,7 +61,7 @@ export default function Work() {
 									</a>
 								</div>
 							)}
-						</div>
+						</motion.div>
 					))}
 				</article>
 				<aside className={style.aside} aria-describedby="aside-heading">

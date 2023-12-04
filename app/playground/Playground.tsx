@@ -1,5 +1,8 @@
+'use client'
+
 import style from '@/app/assets/styles/playground.module.css'
 import utils from '@/app/assets/styles/utils.module.css'
+import { motion } from 'framer-motion'
 import { Poppins } from 'next/font/google'
 import { FaGithub, FaLink } from 'react-icons/fa6'
 import { playgroundObj } from '../lib/PlaygroundObj'
@@ -23,8 +26,20 @@ export default function Playground() {
 					technical concepts.
 				</p>
 				<article className={style.cardContainer}>
-					{playgroundObj.map((project) => (
-						<div key={project.href} className={style.card} title={project.name}>
+					{playgroundObj.map((project, index) => (
+						<motion.div
+							initial={{ opacity: 0, y: '50%' }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{
+								delay: index / 2,
+								duration: 0.51,
+							}}
+							viewport={{ once: true }}
+							layout
+							key={project.href}
+							className={style.card}
+							title={project.name}
+						>
 							<h4 className={style.title}>{project.name}</h4>
 							<small className={style.description}>{project.desc}</small>
 							<div className={style.tagContainer}>
@@ -55,7 +70,7 @@ export default function Playground() {
 									<span className={style.link}>{project.link}</span>
 								</a>
 							)}
-						</div>
+						</motion.div>
 					))}
 				</article>
 				<a
