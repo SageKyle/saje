@@ -36,7 +36,8 @@ export default function Hero() {
 						<article className={Style.heroTxt}>
 							<h1 className={Style.heading}>Frontend Engineer</h1>
 							<h1 className={Style.title} style={sans.style}>
-								I build accessible, performant websites
+								I build accessible,
+								<br /> performant websites
 								<span className={poppins.className}>.</span>
 							</h1>
 							<p className={Style.intro}>
