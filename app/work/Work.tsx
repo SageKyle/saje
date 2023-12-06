@@ -31,7 +31,7 @@ export default function Work() {
 							initial={{ opacity: 0, y: '50%' }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{
-								delay: index / 2,
+								delay: index / 10,
 								duration: 0.51,
 							}}
 							viewport={{ once: true }}

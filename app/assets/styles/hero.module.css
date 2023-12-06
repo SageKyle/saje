@@ -183,6 +183,10 @@
 		font-size: 2.5rem;
 	}
 
+	.btnContainer {
+		justify-content: center;
+	}
+
 	.heroImg {
 		width: 50%;
 		height: 40%;
@@ -240,7 +244,7 @@
 	}
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 920px) and (orientation: landscape) {
 	.container {
 		height: auto;
 	}

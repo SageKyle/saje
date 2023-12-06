@@ -26,12 +26,12 @@ export default function Playground() {
 					technical concepts.
 				</p>
 				<article className={style.cardContainer}>
-					{playgroundObj.map((project, index) => (
+					{playgroundObj.map((project) => (
 						<motion.div
 							initial={{ opacity: 0, y: '50%' }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{
-								delay: index / 2,
+								delay: 0.1,
 								duration: 0.51,
 							}}
 							viewport={{ once: true }}
