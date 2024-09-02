@@ -124,6 +124,11 @@
 	}
 }
 
+/* @media screen and (min-width: 768px) {
+	.heroImg {
+		display: flex;
+	}
+} */
 @media screen and (min-width: 1445px) {
 	.wrapper {
 		min-height: auto;
@@ -131,7 +136,7 @@
 	}
 
 	.container {
-		max-height: 50vh;
+		/* max-height: 50vh; */
 		padding-block: 10rem;
 	}
 

@@ -22,7 +22,7 @@ export default function Intro() {
 			<motion.div
 				style={{ scale: scaleX }}
 				className={Styles.container}
-				aria-description="a quick summary of the two major aspects of my career"
+				aria-details="a quick summary of the two major aspects of my career"
 				ref={ref}
 			>
 				<article className={Styles.section}>

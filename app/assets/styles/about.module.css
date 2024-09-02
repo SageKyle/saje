@@ -117,3 +117,25 @@
 		font-size: 1.6rem;
 	}
 }
+
+.aboutWrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	place-content: center;
+}
+
+.aboutContainer {
+	width: 100%;
+	max-width: 165rem;
+	margin-inline: auto;
+	padding-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url('../images/faint-dots.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	background-attachment: fixed;
+}

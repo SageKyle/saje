@@ -55,7 +55,7 @@ export default function Hero() {
 									contact me
 								</a>
 								<Link
-									href="./docs/resume.pdf"
+									href="./docs/paul-saje-frontend-developer.pdf"
 									target="_blank"
 									rel="noreferrer noopener"
 									download={true}

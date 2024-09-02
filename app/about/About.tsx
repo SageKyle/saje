@@ -1,16 +1,14 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 
-import Avatar from '@/app/assets/images/saje-img.png'
+// import Avatar from '@/app/assets/images/saje-img.png'
+import about from '@/app/assets/styles/about.module.css'
 import Style from '@/app/assets/styles/hero.module.css'
 import utils from '@/app/assets/styles/utils.module.css'
 
 export default function About() {
 	return (
-		<section aria-label="hero section" className={Style.wrapper}>
-			<div
-				className={Style.container}
-				style={{ height: 'auto', paddingTop: '10rem' }}
-			>
+		<section aria-label="hero section" className={about.aboutWrapper}>
+			<div className={about.aboutContainer}>
 				<div className={Style.hero}>
 					<article className={Style.heroTxt}>
 						<h1 className={Style.title}>
@@ -37,15 +35,15 @@ export default function About() {
 							</a>
 						</div>
 					</article>
-					<section className={Style.heroImg}>
-						<Image
+					<aside aria-hidden className={Style.imgPlaceholder}>
+						{/* <Image
 							src={Avatar}
 							alt="Paul Saje avatar"
 							loading="lazy"
 							fill
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-						/>
-					</section>
+						/> */}
+					</aside>
 				</div>
 			</div>
 		</section>

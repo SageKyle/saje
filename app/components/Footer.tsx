@@ -74,11 +74,10 @@ export default function Footer() {
 					</section>
 				</article>
 				<div className={`${Styles.section}`}>
-					<small className={`${Styles.copyright}`}>&copy; Paul Saje 2023</small>
-					<div
-						aria-description="useful links"
-						className={`${Styles.linkIcons}`}
-					>
+					<small className={`${Styles.copyright}`}>
+						&copy; Paul Saje {new Date().getFullYear()}
+					</small>
+					<div className={`${Styles.linkIcons}`}>
 						<a
 							href="https://twitter.com/ominyi_saje"
 							target="_blank"
